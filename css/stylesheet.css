@@ -4,6 +4,22 @@
   color: white;
 }
 
+.button_container {
+  height: 100px;
+  position: relative;
+}
+
+button:hover {
+  background-color:rgb(11, 217, 11);
+}
+
+
+
+.processing_button {
+  height: 50px;
+  width: 100px;
+}
+
 .centered {
   position: absolute;
   top: 50%;
@@ -16,7 +32,26 @@
   height: 200px;
 }
 
-ul {
+a.link_to:link {
+  color: blue;
+  text-decoration: none;
+}
+
+a.link_to:visited {
+  text-decoration: none;
+  color: blue;
+}
+
+a.link_to:hover {
+  text-decoration: underline;
+}
+
+a.link.to:active {
+  text-decoration: underline;
+  color: greenyellow;
+}
+
+ul.ul_bar {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -24,11 +59,11 @@ ul {
   background-color: #333;
 }
 
-li {
+li.li_bar {
   float: left;
 }
 
-li a {
+li.li_bar a {
 	display: block;
 	color: white;
 	text-align: center;
@@ -36,7 +71,7 @@ li a {
 	text-decoration: none;
 }
 
-li a:hover:not(.active) {
+li.li_bar a:hover:not(.active) {
 	background-color: #111;
 }
 
