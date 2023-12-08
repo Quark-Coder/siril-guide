@@ -1,0 +1,240 @@
+<html>
+	<head>
+		<title> Siril guide </title>
+		<link type="text/css" rel="stylesheet" href="../css/stylesheet.css">
+        <script type="text/javascript" src="../js/slider.js"></script>
+		
+	</head>
+	
+	<body style="margin: 0;">
+		<div class="container">
+			<div class="box">
+				<img src="../img/main.jpg" height="100%" width="100%">
+			</div>
+			<div class="centered"> <font size="30" > Siril guide </font> </div>
+		</div>
+		
+		<ul class="ul_bar">
+			<li class="li_bar"> <a href="../index.html"> Getting started </a> </li>
+			<li class="li_bar"> <a href="preprocess.html"> Pre-process </a> </li>
+			<li class="li_bar"> <a class="active" href="processing.html"> Processing </a> </li>
+			<li class="li_bar"> <a href="tools.html"> Tools </a> </li>
+			<li class="li_bar"> <a href="gallery.html"> Gallery </a> </li>
+			<li class="li_bar"> <a href="about.html"> About </a> </li>
+		</ul>
+
+        <div class="sheetTemplate">
+
+		<font size="5">
+			<i>This guide will use this data:<a class="link_to" href="https://drive.google.com/file/d/1veYt4vV2C12JGLnnQJ74ybvokGloz8h-/view?usp=sharing">M31</a></i>
+			<p> 
+                In this guide we will process the galaxy.
+                Due to its small size (for me personally), processing such objects is
+                easier, but the M31 is known for its difficulty in obtaining beautiful colors.
+            </p>
+            <p>
+                Each instrument will be separated. And each will be marked by difficulty: <br>
+                🟩- does not depend on the type of DSO, taste or other factors. Can be repeated identically. <br>
+                🟧- partly depends on the object, your sense of taste also affects at it, it 
+                is advisable to select the parameters yourself. <br>
+                🟥- highly depends on the image quality, DSO type, your taste, the availability of 
+                external lighting, the quality of your screen and many additional factors. It is not
+                 recommended to completely repeat the process in these tools; you need to select the parameters yourself.
+            </p>
+            <p> <font color="red">
+                Please note that this guide shows the possibilities of using various tools,
+                but this does not mean that you should completely copy my processing method. 
+                Experiment, swap tools, repeat BGE or color saturation several times - complete
+                freedom of action. So you will most likely be able to process it better than me ^_^
+            </p> </font>
+            <p>
+                First we need to at least see something. Let's enable Autostretch:<br>
+                <img src="../img/galaxy/autostretch.jpg"><br>
+                Quite often you will notice that the entire image is very green or red. 
+                In order to see something, you need unchain channels.<br>
+                <img src="../img/galaxy/unchain.jpg"><br>
+                Now we need a crop in order to remove stacking artifacts 
+                (they are close to the image borders), and also to make the galaxy better visible.
+                Hold down the left mouse button, draw a rectangle, center it on the galaxy and press the right button. <br>
+                <img src="../img/galaxy/crop.jpg"><br>
+            </p>
+
+            <h2> 🟧-🟥 Color calibration </h2>
+            <p> 
+                Color calibration allows you to adjust the color of the entire image.
+                This will also correct any green or red color you may have seen in the beginning. <br> 
+                Let's use PCC (Photometric Color Calibration): <br>
+                <img src="../img/galaxy/color_calibr_1.jpg">
+                <img src="../img/galaxy/color_calibr_2.jpg" style="vertical-align: top;"> <br>
+                Find your object (if you don't know what it's called, use 
+                <a class="link_to" href="https://google.com" target="_blank">Google</a> or 
+                <a class="link_to" href="https://nova.astrometry.net/upload" target="_blank">Astrometry</a>).
+                Enter the focal length and pixel size (for this object 135mm and 3.7μm).<br>
+                <img src="../img/galaxy/color_calibr_3.jpg"> <br>
+                Wait for the PCC to complete its work:<br>
+                <img src="../img/galaxy/color_calibr_4.jpg"> <br>
+            </p>
+
+            <h2> 🟩 StarNet++ </h2>
+            <p> 
+                In order for Starnet to work correctly, we need to return the image to linear:<br>
+                <img src="../img/galaxy/linear.jpg"> <br>
+                Now let`s run Starnet: <br>
+                <img src="../img/galaxy/star_procc_1.jpg"> 
+                <img src="../img/galaxy/star_procc_2.jpg" style="vertical-align: top;"> <br>
+                Check the linear image pre-stretch checkbox: <br>
+                <img src="../img/galaxy/star_procc_3.jpg"> <br>
+                <font color="red">It will take some time...</font> <br>
+                <img src="../img/galaxy/star_procc_4.jpg"> <br>
+            </p>
+
+            <h2> 🟥 GHT (Generalized Hyperbolic Transformations) AKA Stretch </h2>
+            <p> 
+                Stretching is the second most important task in all processing.
+                This is where you get all the detail that makes astrophotography so interesting.
+                First we need to do a preliminary stretch to see the object:<br>
+                <img src="../img/galaxy/ght_1.jpg"> <br>
+                Select the logarithmic scale check box and move local stretch intensity slider to the max (15.0):<br>
+                <img src="../img/galaxy/ght_2.jpg"> <br>
+                Now, by changing the Stretch factor you need to shift the peak of the histogram two squares to the right: <br>
+                <img src="../img/galaxy/ght_3.jpg" width="90%"> <br>
+                This is what it should look like:
+                <img src="../img/galaxy/prestretched_img.jpg" width="90%"> <br>
+            </p>
+
+            <h2> 🟩 BGE (BackGround Extraction) </h2>
+            <p> 
+                This tool allows you to align and make the background more uniform:<br>
+                <img src="../img/galaxy/BGE.jpg"> <br>
+                Click Generate to create a grid of samples:<br>
+                <img src="../img/galaxy/BGE_2.jpg"> <br>
+                <img src="../img/galaxy/BGE_3.jpg"> <br>
+                Now, by clicking the left mouse button to create a 
+                sample and the right mouse button to delete it, we need to edit the grid
+                so that the samples only go to the background and not to the object:<br>
+                <img src="../img/galaxy/BGE_4.jpg"> <br>
+                When you have edited the grid, click Compute background and Apply:<br>
+                <img src="../img/galaxy/BGE_5.jpg"> <br>
+                Now the background looks smooth: <br>
+                <img src="../img/galaxy/BGE_6.jpg"><br>
+            </p>
+
+            <h2> 🟩 Banding reduction </h2>
+            <p> 
+                This tool is useful when you notice vertical lines in an image.
+                Take a closer look at the previous image, you will definitely notice them:<br>
+                <img src="../img/galaxy/banding_lines.jpg"><br>
+                Let's get rid of them. <font color="red">Before doing this, be sure to save the image as prestretched.fit 32 bit! 
+                This tool often crashes Siril: </font> <br>
+                <img src="../img/galaxy/banding_reduct_1.jpg"><br>
+                Check protect highlights and, if the lines are not only horizontal,
+                but also vertical (or just vertical) check Vertical banding checkbox too.
+                If after Apply Siril crashes, reduce Ammount:<br>
+                <img src="../img/galaxy/banding_reduct_2.jpg"><br>
+                Now the lines are gone:
+                <img src="../img/galaxy/banding_reduct_3.jpg"><br>
+            </p>
+
+            <h2> 🟩 SCNR(Green noise reduction) </h2>
+            <p> 
+                If the image is taken with a color camera, this means that the
+                image definitely has green noise. This is because color cameras typically
+                have twice as many green pixels as red and blue pixels. However, green noise
+                also appears during processing, even if it was not there initially:<br>
+                <img src="../img/galaxy/green_noise_1.jpg">
+                <img src="../img/galaxy/green_noise_2.jpg" style="vertical-align: top;"><br>
+                No more green:<br>
+                <img src="../img/galaxy/green_noise_3.jpg"><br>
+            </p>
+
+            <h3>GHT</h3>
+            <p>
+                <a name="black_points">Now let's get back to GHT. Click on the area where the histogram peak is located.</a>
+                Afterwards, move the Highlight protection slider so that it is identical to the
+                Symmetry point slider. Also set local stretch intensity to max:<br>
+                <img src="../img/galaxy/ght_black_points_1.jpg"><br>
+                Now, changing the linear stretch, shift the histogram to the left until there is a small gap left:<br>
+                <img src="../img/galaxy/ght_black_points_2.jpg" width="90%"><br>
+                As you can see, this makes the background darker while maintaining the galaxy.<br>
+                <br>
+                Now let's repeat the Stretch as we did in the beginning to get more details. 
+                This is an important and difficult step: you must get as much detail as possible, 
+                but you must not overexpose the galaxy, especially the core. If you see that the core 
+                is too bright, move the local stretch intensity slider to the right until the core becomes less bright:<br>
+                <img src="../img/galaxy/next_ght_stretch.jpg" width="90%"><br>
+                And now let's make the background darker again using the <a href="#black_points" class="link_to">previous</a> technique: <br>
+                <img src="../img/galaxy/next_black_points.jpg" width="90%"><br>
+            </p>
+
+            <h2> 🟧 CLAHE(Contrast-Limited Adaptive Histogram Equalisation) </h2>
+            <p>   
+                This tool allows you to get even more detail: <br> 
+                <img src="../img/galaxy/contrast_limited_1.jpg" ><br>
+                If you overdo it, the background will become noisy too.
+                Adjust the tiles grid size until you get more detail without
+                artifacts or looking too unnatural:<br>
+                <img src="../img/galaxy/contrast_limited_2.jpg" ><br>
+            </p>
+
+            <h2> 🟩 Noise reduction </h2>
+            <p>     
+                Depending on the image quality, the amount of noise may vary. 
+                However, using a noise removal program, it is possible to obtain
+                more detail than without it. To do this, save the image as starless.tif
+                32 bit (.TIFF format). Then open the program, drag-and-drop the image, in
+                the settings on the right side, select Several noise and on Model Preference.
+                Press save.<br>
+                <img src="../img/galaxy/noise_reduct_1.jpg" ><br>
+                <br>
+                <img src="../img/galaxy/noise_reduct_2.jpg" ><br>   
+            </p>
+
+            <h3>GHT</h3>
+            <p>
+                After denoise the background became brighter. Let's fix this:<br>
+                <img src="../img/galaxy/make_bg_darker_after_denoise.jpg" width="90%"><br>  
+
+            </p>
+
+            <h2> 🟧 Wavelets(sharpness) </h2>
+            <p>     
+                Another tool that will increase the detail of the object. <br>
+                <img src="../img/galaxy/wavelets_1.jpg" ><br>
+                Press Execute:<br>
+                <img src="../img/galaxy/wavelets_2.jpg" ><br>
+                It will also easily increase the noise if you overdo it. Each
+                subsequent slider affects more significant details. This means 
+                that the first slider affects extremely fine detail, and, for example,
+                the second and third affect the dust ring. Select the parameters so that
+                the final image does not look too synthetic and does not change the color
+                too much (wavelets generate green noise):<br>
+                <img src="../img/galaxy/wavelets_2_2.jpg" ><br>
+                <br>
+                <img src="../img/galaxy/wavelets_3.jpg" ><br>   
+            </p>
+
+
+           
+
+
+
+
+        
+
+                
+
+
+
+        
+            
+    
+
+
+
+    
+
+		
+		</div>
+	</body>
+	
+</html>

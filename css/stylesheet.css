@@ -13,8 +13,6 @@ button:hover {
   background-color:rgb(11, 217, 11);
 }
 
-
-
 .processing_button {
   height: 50px;
   width: 100px;
@@ -87,7 +85,6 @@ li.li_bar a:hover:not(.active) {
   border: none;
 }
 
-/* The container <div> - needed to position the dropup content */
 .dropup {
   position: relative;
   display: inline-block;
@@ -95,7 +92,6 @@ li.li_bar a:hover:not(.active) {
   margin-top:50px;
 }
 
-/* Dropup content (Hidden by Default) */
 .dropup-content {
   display: none;
   position: absolute;
@@ -106,7 +102,6 @@ li.li_bar a:hover:not(.active) {
   z-index: 1;
 }
 
-/* Links inside the dropup */
 .dropup-content a {
   color: black;
   padding: 12px 16px;
@@ -114,15 +109,24 @@ li.li_bar a:hover:not(.active) {
   display: block;
 }
 
-/* Change color of dropup links on hover */
 .dropup-content a:hover {background-color: rgb(135, 219, 9)}
 
-/* Show the dropup menu on hover */
 .dropup:hover .dropup-content {
   display: block;
 }
 
-/* Change the background color of the dropup button when the dropup content is shown */
 .dropup:hover .dropbtn {
   background-color: rgb(58, 185, 41);
+}
+
+.sheetTemplate {
+  margin-left: 5cm;
+  margin-right: 5cm;
+  background-color: #ffffff;
+  height: 100%;
+
+}
+
+body {
+  background-color:#c6c6c6;
 }
