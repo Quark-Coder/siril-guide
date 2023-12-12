@@ -1,7 +1,30 @@
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
 .container {
   position: relative;
   text-align: center;
   color: white;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #2f2f2f;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color:rgb(90, 89, 89);
 }
 
 .button_container {
@@ -10,7 +33,7 @@
 }
 
 button:hover {
-  background-color:rgb(11, 217, 11);
+  background-color:rgb(0, 185, 0);
 }
 
 .processing_button {
@@ -49,32 +72,8 @@ a.link.to:active {
   color: greenyellow;
 }
 
-ul.ul_bar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li.li_bar {
-  float: left;
-}
-
-li.li_bar a {
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-
-li.li_bar a:hover:not(.active) {
-	background-color: #111;
-}
-
 .active {
-  background-color: #04AA6D;
+  background-color: #0c9916;
 }
 
 .dropbtn {
@@ -119,14 +118,60 @@ li.li_bar a:hover:not(.active) {
   background-color: rgb(58, 185, 41);
 }
 
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #a5a5a5;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 .sheetTemplate {
   margin-left: 5cm;
   margin-right: 5cm;
   background-color: #ffffff;
-  height: 100%;
-
 }
 
 body {
-  background-color:#c6c6c6;
+  background-color:#9c9c9c;
+}
+
+.contributors {
+  width: 100%;
+  height: 100px;
+  background-color: #f1f1f1;
 }

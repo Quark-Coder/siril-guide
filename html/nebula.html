@@ -13,18 +13,95 @@
 			<div class="centered"> <font size="30" > Siril guide </font> </div>
 		</div>
 		
-		<ul class="ul_bar">
-			<li class="li_bar"> <a href="../index.html"> Getting started </a> </li>
-			<li class="li_bar"> <a href="preprocess.html"> Pre-process </a> </li>
-			<li class="li_bar"> <a class="active" href="processing.html"> Processing </a> </li>
-			<li class="li_bar"> <a href="tools.html"> Tools </a> </li>
-			<li class="li_bar"> <a href="gallery.html"> Gallery </a> </li>
-			<li class="li_bar"> <a href="about.html"> About </a> </li>
-		</ul>
+		<div class="navbar">
+			<a href="../index.html">Getting started</a>
+			<a href="preprocess.html"> Pre-process </a>
+			<div class="dropdown">
+			  <button class="dropbtn">Processing
+				<i class="fa fa-caret-down"></i>
+			  </button>
+			  <div class="dropdown-content">
+				<a href="galaxy.html">Galaxy</a>
+				<a class="active" href="nebula.html">Nebulae</a>
+				<a href="">Cluster</a>
+			  </div>
+			</div> 
+			<a href="tools.html"> Tools </a>
+			<a href="gallery.html"> Gallery </a>
+			<a href="about.html"> About </a>
 
-        
-		
-		
+		</div>
+
+		<div class="sheetTemplate">
+		<font size="5">
+			<i>This guide will use this data:<a class="link_to" href="">The Veil Nebulae</a></i>
+			<p> 
+                In this guide we will process the nebulae.
+                
+
+            </p>
+            <p>
+                Each instrument will be separated. And each will be marked by difficulty: <br>
+                🟩- does not depend on the type of DSO, taste or other factors. Can be repeated identically. <br>
+                🟧- partly depends on the object, your sense of taste also affects at it, it 
+                is advisable to select the parameters yourself. <br>
+                🟥- highly depends on the image quality, DSO type, your taste, the availability of 
+                external lighting, the quality of your screen and many additional factors. It is not
+                recommended to completely repeat the process in these tools; you need to select the parameters yourself.
+            </p>
+
+            <p> <font color="red">
+                Please note that this guide shows the possibilities of using various tools,
+                but this does not mean that you should completely copy my processing method. 
+                Experiment, swap tools, repeat BGE or color saturation several times - complete
+                freedom of action. So you will most likely be able to process it better than me ^_^
+            </p> </font>
+
+			<p>
+                First we need to at least see something. Let's enable Autostretch:<br>
+                <img src="../img/nebulae/"><br>
+                Quite often you will notice that the entire image is very green or red. 
+                In order to see something, you need unchain channels.<br>
+                <img src="../img/nebulae/"><br>
+                Now we need a crop in order to remove stacking artifacts 
+                (they are close to the image borders), and also to make the galaxy better visible.
+                Hold down the left mouse button, draw a rectangle, center it on the galaxy and press the right button. <br>
+                <img src="../img/nebulae/"><br>
+            </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+
+    
+		  <hr>
+		  Contributors:<br>
+		  Quark, careless25
 	</body>
 	
 </html>

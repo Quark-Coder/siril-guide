@@ -14,37 +14,42 @@
 			<div class="centered"> <font size="30" > Siril guide </font> </div>
 		</div>
 		
-		<ul class="ul_bar">
-			<li class="li_bar"> <a class="active" href="index.html"> Getting started </a> </li>
-			<li class="li_bar"> <a href="html/preprocess.html"> Pre-process </a> </li>
-			<li class="li_bar"> <a href="html/galaxy.html"> Processing </a> </li>
-			<li class="li_bar"> <a href="html/tools.html"> Tools </a> </li>
-			<li class="li_bar"> <a href="html/gallery.html"> Gallery </a> </li>
-			<li class="li_bar"> <a href="html/about.html"> About </a> </li>
-		</ul>
+		<div class="navbar">
+			<a class="active" href="index.html">Getting started</a>
+			<a href="html/preprocess.html"> Pre-process </a>
+			<div class="dropdown">
+			  <button class="dropbtn">Processing
+				<i class="fa fa-caret-down"></i>
+			  </button>
+			  <div class="dropdown-content">
+				<a href="html/galaxy.html">Galaxy</a>
+				<a href="html/nebula.html">Nebulae</a>
+				<a href="">Cluster</a>
+			  </div>
+			</div> 
+			<a href="html/tools.html"> Tools </a>
+			<a href="html/gallery.html"> Gallery </a>
+			<a href="html/about.html"> About </a>
+		  </div>
 
 	<div class="sheetTemplate">
-		
-		<font size="5">
 
-			Do you want to improve your astrophotography editing skills, or learn this difficult but very interesting skill?<br>
-
-			<div class="img-comp-container" height="800px">
+		<p> Do you want to improve your astrophotography editing skills, or learn this difficult but very interesting skill?<br>
+			<div class="img-comp-container">
 				<div class="img-comp-img">
-				  <img src="img/before.jpg" width="810" height="800">
+				  <img src="img/before.jpg" width="500" height="500">
 				</div>
 				<div class="img-comp-img img-comp-overlay">
-				  <img src="img/after.jpg" width="810" height="800">
+				  <img src="img/after.jpg" width="500" height="500">
 				</div>
-			  </div>
-
+			</div>
 		    <script type="text/javascript">
 				initComparisons();
 			</script>
 
-			In this case, you have come to the right place and you will get everything you need to start processing images like a pro completely free!
-			<br>
-			<br> First you need to download the necessary programs:
+			In this case, you have come to the right place and you will get everything you
+			need to start processing images like a pro completely free!
+			First you need to download the necessary programs:
 			<OL type="1" style="margin-top: 0px;"> 
 				<LI> <a class="link_to" href="https://siril.org/" target="_blank"> SiriL - astrophotography editing tool. </a> </LI>
 				<LI> <a class="link_to" href="https://starnetastro.com/wp-content/uploads/2022/03/StarNetv2CLI_Win.zip" target="_blank"> StarNet++ - star removing tool. </a> </LI>
@@ -53,7 +58,7 @@
 					<br> <font color="red" size="4"> Read README.TXT at the beginning! </font> </LI>
 			</OL>
 
-		</font>
+		</p>
 	
 		<font size="6"><b> StarNet++:</b>  </font>
 		<font size="5">
@@ -83,5 +88,10 @@
 		</div>
 
 	</div>
+	<hr>
+	<font size="5">
+    Contributors:<br>
+    Quark, careless25
+	</font>
 	</body>
 </html>
