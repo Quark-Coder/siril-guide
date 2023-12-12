@@ -5,6 +5,7 @@
 .img-comp-img {
   position: absolute;
   overflow: hidden;
+  z-index: 0;
 }
 
 .img-comp-img {
