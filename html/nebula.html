@@ -34,10 +34,14 @@
 
 		<div class="sheetTemplate">
 		<font size="5">
-			<i>This guide will use this data:<a class="link_to" href="">The Veil Nebulae</a></i>
+			<i>This guide will use this data:<a class="link_to" href="https://drive.google.com/file/d/1pdsMSi5WrL6OJ4YeRFLjZrL0C8zEPjLw/view?usp=drive_link" target="_blank">Eastern Veil</a></i>
 			<p> 
-                In this guide we will process the nebulae.
-                
+                Nebula is quite challenging to process as 
+				it usually takes up a lot of space, making it 
+				difficult to align the background and get an 
+				overall idea of ​​the object's brightness. However, Eastern Veil Nebula
+				is a simple object - its contrast makes it easy to 
+				get color and detail.
 
             </p>
             <p>
@@ -58,16 +62,120 @@
             </p> </font>
 
 			<p>
-                First we need to at least see something. Let's enable Autostretch:<br>
-                <img src="../img/nebulae/"><br>
+                Let's enable Autostretch:<br>
+                <img src="../img/galaxy/autostretch.jpg"><br>
                 Quite often you will notice that the entire image is very green or red. 
                 In order to see something, you need unchain channels.<br>
-                <img src="../img/nebulae/"><br>
+                <img src="../img/galaxy/unchain.jpg"><br>
                 Now we need a crop in order to remove stacking artifacts 
                 (they are close to the image borders), and also to make the galaxy better visible.
                 Hold down the left mouse button, draw a rectangle, center it on the galaxy and press the right button. <br>
-                <img src="../img/nebulae/"><br>
+                <img src="../img/nebulae/crop.jpg" width="1110px"><br>
             </p>
+
+			<h2> 🟧(Moderate)-🟥(Hard) Color calibration </h2>
+            <p> 
+                Color calibration allows you to adjust the color of the entire image.
+                This will also correct any green or red color you may have seen in the beginning. <br> 
+                Let's use PCC (Photometric Color Calibration): <br>
+                <img src="../img/galaxy/color_calibr_1.jpg">
+                <img src="../img/galaxy/color_calibr_2.jpg" style="vertical-align: top;"> <br>
+                Find your object (if you don't know what it's called, use 
+                <a class="link_to" href="https://google.com" target="_blank">Google</a> or 
+                <a class="link_to" href="https://nova.astrometry.net/upload" target="_blank">Astrometry</a>).
+                Enter the focal length and pixel size (for this object 1284.7mm and 4.63μm).<br>
+                <img src="../img/nebulae/PCC.jpg"> <br>
+                Wait for the PCC to complete its work:<br>
+                <img src="../img/nebulae/PCC_console.jpg"> <br>
+            </p>
+
+			<h2> 🟩(Easy) StarNet++ </h2>
+            <p> 
+                Now let`s run Starnet: <br>
+                <img src="../img/galaxy/star_procc_1.jpg"> 
+                <img src="../img/galaxy/star_procc_2.jpg" style="vertical-align: top;"> <br>
+                Check the linear image pre-stretch checkbox: <br>
+                <img src="../img/galaxy/star_procc_3.jpg"> <br>
+                <font color="red">It will take some time...</font> <br>
+                <img src="../img/galaxy/star_procc_4.jpg"> <br>
+            </p>
+
+			<h2> 🟥(Hard) GHT (Generalized Hyperbolic Transformations) AKA Stretch </h2>
+            <p> 
+                Stretching is the second most important task in all processing.
+                This is where you get all the detail that makes astrophotography so interesting.
+                First we need to do a preliminary stretch to see the object:<br>
+                <img src="../img/galaxy/ght_1.jpg"> <br>
+                Select the logarithmic scale check box and move local stretch intensity slider to the max (15.0):<br>
+                <img src="../img/nebulae/GHT_1.jpg"> <br>
+                Now, by changing the Stretch factor you need to shift the peak of the histogram two squares to the right: <br>
+                <img src="../img/nebulae/GHT_2.jpg" width="1100px"> <br>
+
+				<a name="black_points">Now let`s make background darker. Click on the area where the histogram peak is located.</a>
+                Afterwards, move the Highlight protection slider so that it is identical to the
+                Symmetry point slider. Also set local stretch intensity to max:<br>
+                <img src="../img/nebulae/GHT_3.jpg"><br>
+                Now, changing the linear stretch, shift the histogram to the left until there is a small gap left:<br>
+                <img src="../img/nebulae/GHT_4.jpg" width="1100px"><br>
+                Now let's repeat the Stretch.
+                <img src="../img/nebulae/GHT_5.jpg" width="1100px"><br>
+            </p>
+
+			<h2> 🟩(Easy) BGE (BackGround Extraction) </h2>
+            <p> 
+                This tool allows you to align and make the background more uniform:<br>
+                <img src="../img/galaxy/BGE.jpg"> <br>
+                Click Generate to create a grid of samples:<br>
+                <img src="../img/galaxy/BGE_2.jpg"> <br>
+                <img src="../img/nebulae/BGE_1.jpg"> <br>
+                Now, by clicking the left mouse button to create a 
+                sample and the right mouse button to delete it, we need to edit the grid
+                so that the samples only go to the background and not to the object:<br>
+                <img src="../img/nebulae/BGE_2.jpg"> <br>
+                When you have edited the grid, click Compute background and Apply:<br>
+                <img src="../img/galaxy/BGE_5.jpg"> <br>
+                Now the background looks smooth: <br>
+                <img src="../img/nebulae/BGE_3.jpg"><br>
+            </p>
+
+			<h3>GHT</h3>
+            <p>
+				Now let`s again do several stretch and background darkenings. At stretch you must get as much detail as possible, 
+                but you must not overexpose the nebulae, especially the brightest parts. If you see that the nebulae parts 
+                are too bright, move the local stretch intensity slider to the right until it becomes less bright:<br>
+                <img src="../img/nebulae/Next_GHT_1.jpg"><br>
+                <br>
+                <img src="../img/nebulae/Next_GHT_2.jpg" width="1100px"><br>
+                <br>
+                <img src="../img/nebulae/Next_GHT_3.jpg" width="1100px"><br>
+                <br>
+                <img src="../img/nebulae/Next_GHT_4.jpg" width="1100px"><br>
+            </p>
+
+			<h2> 🟧(Moderate) CLAHE(Contrast-Limited Adaptive Histogram Equalisation) </h2>
+            <p>   
+                This tool allows you to get even more detail: <br> 
+                <img src="../img/galaxy/contrast_limited_1.jpg" ><br>
+                If you overdo it, the background will become noisy too.
+                Adjust the tiles grid size until you get more detail without
+                artifacts or looking too unnatural:<br>
+                <img src="../img/nebulae/CLAHE.jpg" width="1100px"><br>
+            </p>
+
+			<h2> 🟩(Easy) Noise reduction </h2>
+            <p>     
+                Depending on the image quality, the amount of noise may vary. 
+                However, using a noise removal program, it is possible to obtain
+                more detail than without it. To do this, save the image as starless.tif
+                32 bit (.TIFF format). Then open the program, drag-and-drop the image, in
+                the settings on the right side, select Several noise and on Model Preference.
+                Press save.<br>
+                <img src="../img/nebulae/Denoise_1.jpg" ><br>
+                <br>
+                <img src="../img/galaxy/noise_reduct_2.jpg" ><br>   
+            </p>
+
+
 
 
 
