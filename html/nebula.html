@@ -175,6 +175,123 @@
                 <img src="../img/galaxy/noise_reduct_2.jpg" ><br>   
             </p>
 
+            <h3>BGE</h3>
+            <p>
+				Repeat BGE after Denoise to make the background more uniform:<br>
+                <img src="../img/nebulae/Another_BGE_1.jpg"><br>
+            </p>
+
+            <h3>GHT</h3>
+            <p>
+				Now use GHT again to make the background darker:<br>
+                <img src="../img/nebulae/Next_Next_GHT_1.jpg"><br>
+                A little stretch: <br>
+                <img src="../img/nebulae/Next_Next_GHT_2.jpg"><br>
+                And again make the background darker:<br>
+                <img src="../img/nebulae/Next_Next_GHT_3.jpg"><br>
+            </p>
+
+            <h2> 🟧(Moderate) Wavelets(sharpness) </h2>
+            <p>     
+                Another tool that will increase the detail of the object. <br>
+                <img src="../img/galaxy/wavelets_1.jpg" ><br>
+                Press Execute:<br>
+                <img src="../img/galaxy/wavelets_2.jpg" ><br>
+                It will also easily increase the noise if you overdo it. Each
+                subsequent slider affects more significant details. This means 
+                that the first slider affects extremely fine detail, and, for example,
+                the second and third affect the dust ring. Select the parameters so that
+                the final image does not look too synthetic and does not change the color
+                too much (wavelets generate green noise):<br>
+                <img src="../img/nebulae/Wavelets_1.jpg" ><br>
+                <br>
+                <img src="../img/nebulae/Wavelets_2.jpg" ><br>   
+            </p
+
+
+            <h></h>
+
+            <h2>🟧(Moderate) Asinh Transformation </h2>
+            <p>        
+                This tool allows you to quickly change the brightness
+                of the entire image and how dark your background will be.
+                This can be done using GHT, but Asinh can be used for small adjustments:<br>
+                <img src="../img/galaxy/asinh_1.jpg" ><br>  
+                By increasing the number of black points you can make the background 
+                darker, but do not overdo it, the background should not be completely black:<br>
+                <img src="../img/nebulae/Asinh_1.jpg" width="1100px" ><br>  
+            </p>
+
+            <h2> 🟥(Hard) Masking </h2>
+            <p>        
+                Masking is needed to highlight individual parts of an object. 
+                If you do not use them, the color of the andromeda will be yellow-orange;
+                a blue tint rarely appears at the edges, but with the help of masks this
+                can be corrected. Here it should be clarified that Siril version 1.2.0 does
+                not have a built-in function for generating masks (which, for example, PixInsight
+                has), so this process is done manually and is quite complicated.<br>
+                <br>
+                <a name="split_rgb">First you need to extract color channels from the image in order to work with them further:</a>
+                <img src="../img/galaxy/extract_RGB_1.jpg">
+                <img src="../img/galaxy/extract_RGB_2.jpg" style="vertical-align: top;"><br> 
+                For ease of understanding, call channels by their proper names:<br>
+                <img src="../img/galaxy/extract_RGB_3.jpg"> <br>
+                Now let's open the blue channel:<br>
+                <img src="../img/nebulae/Open_B_channel.jpg"><br>
+                Then we use GHT to select the object. To do this, select linear stretch:<br>
+                <img src="../img/nebulae/Linear_stretch.jpg"><br>
+                Now, by moving the slider, we need to get rid of the background, 
+                otherwise it will spoil the image, but at the same time we need to
+                preserve the outline of the galaxy:<br>
+                <img src="../img/nebulae/Linear_Blue.jpg" width="1100px"><br>
+                However, the problem is that the background is still not
+                black, and this is important for masks. To see the background,
+                look under the image monitor in Siril. You will notice two sliders. 
+                Move the top slider to the left until you see white dots:<br>
+                <img src="../img/galaxy/how_to_see_background.jpg"><br>
+                To remove them, you can use the built-in filling function in Siril, or using GIMP:<br>
+                <img src="../img/nebulae/White_dots.jpg"><br>
+                Open the image in GIMP, be sure to click Keep:<br>
+                <img src="../img/nebulae/Keep_GIMP.jpg"><br>
+                After that, find paintbrush:<br>
+                <img src="../img/galaxy/gimp_2.2.jpg"><br>
+                Now configure the settings as shown:<br>
+                <img src="../img/galaxy/gimp_2.3.jpg"><br>
+                Walk over the entire background without hitting the object.<br>
+                <br>
+                Then save it as B-mask.tif:<br>
+                <img src="../img/nebulae/Save_GIMP.jpg" width="750px">
+                <img src="../img/galaxy/gimp_6.jpg" style="vertical-align: top;"><br>
+                This is what you should get:<br>
+                <img src="../img/nebulae/GIMP_Result.jpg"><br>
+                Now let's open B.fit again, but this time we'll highlight the brightest part - the core.
+                Since there are a lot of black points, there is no point in cleaning the background in GIMP:<br>
+                <img src="../img/nebulae/Linear_Blue_2.jpg" width="1100px"><br>
+                <h3>Pixelmath</h3>
+                Pixelmath is a tool for combining layers. With it we can apply the masks we made:<br>
+                <img src="../img/galaxy/pixelmath_1.jpg"><br>
+                Uncheck Use single RGB/K... and press plus sign:<br>
+                <img src="../img/galaxy/pixelmath_2.jpg"><br>
+                Select all files (R,G,B, masks and cores) by holding Shift and clicking the left mouse button:<br>
+                <img src="../img/nebulae/PixelMath_1.jpg"><br>
+                Now we see our files as variables:<br>
+                <img src="../img/nebulae/PixelMath_2.jpg"><br>
+                Change them according to the content of the image by double clicking on it:<br>
+                <img src="../img/nebulae/PixelMath_3.jpg"><br>
+                Now enter the appropriate layers in the lines and click Apply to see the initial image:<br>
+                <img src="../img/nebulae/PixelMath_4.jpg" width="1100px"><br>
+                Now, we need to add the corresponding masks to the corresponding colors.
+                From the masks we subtract the cores so that they do not overexpose
+                the already bright core. By selecting the brightness of these masks
+                we achieve a good color.<font color="red"> Everything here is very individual and you
+                need to experiment.</font> For example, to highlight the details of one mask,
+                you can subtract the brighter mask from another:<br>
+                <img src="../img/nebulae/PixelMath_5.jpg" width="1100px"><br>
+            </p>
+
+
+            
+
 
 
 
