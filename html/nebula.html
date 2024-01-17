@@ -184,11 +184,11 @@
             <h3>GHT</h3>
             <p>
 				Now use GHT again to make the background darker:<br>
-                <img src="../img/nebulae/Next_Next_GHT_1.jpg"><br>
+                <img src="../img/nebulae/Next_Next_GHT_1.jpg" width="1100px"><br>
                 A little stretch: <br>
-                <img src="../img/nebulae/Next_Next_GHT_2.jpg"><br>
+                <img src="../img/nebulae/Next_Next_GHT_2.jpg" width="1100px"><br>
                 And again make the background darker:<br>
-                <img src="../img/nebulae/Next_Next_GHT_3.jpg"><br>
+                <img src="../img/nebulae/Next_Next_GHT_3.jpg" width="1100px"><br>
             </p>
 
             <h2> 🟧(Moderate) Wavelets(sharpness) </h2>
@@ -203,9 +203,9 @@
                 the second and third affect the dust ring. Select the parameters so that
                 the final image does not look too synthetic and does not change the color
                 too much (wavelets generate green noise):<br>
-                <img src="../img/nebulae/Wavelets_1.jpg" ><br>
+                <img src="../img/nebulae/Wavelets_1.jpg" width="1100px"><br>
                 <br>
-                <img src="../img/nebulae/Wavelets_2.jpg" ><br>   
+                <img src="../img/nebulae/Wavelets_2.jpg" width="1100px"><br>   
             </p
 
 
@@ -289,41 +289,82 @@
                 <img src="../img/nebulae/PixelMath_5.jpg" width="1100px"><br>
             </p>
 
+            <h2> 🟧(Moderate) Color saturation </h2>
+            <p>        
+                After adding masks the image is still quite pale, let's fix that with this tool:<br>
+                <img src="../img/galaxy/color_saturation_1.jpg"><br>
+                Here you can select either a separate color that you want to enhance, or all at once.
+                The lower the Background factor, the more the duller details are colored, right down
+                to the background itself:<br>
+                <img src="../img/nebulae/ColorCalibr_1.jpg" width="1100px"><br>
+            </p>
 
-            
+            <h2> 🟩(Easy) SCNR(Green noise reduction) </h2>
+            <p> 
+                If the image is taken with a color camera, this means that the
+                image definitely has green noise. This is because color cameras typically
+                have twice as many green pixels as red and blue pixels. However, green noise
+                also appears during processing, even if it was not there initially:<br>
+                <img src="../img/galaxy/green_noise_1.jpg"> <br>
+                No more green:<br>
+                <img src="../img/nebulae/SCNR.jpg"><br>
+            </p>
 
+            <h3> Background Neutralization </h3>
+            <p>
+                This is a tool similar to PCC, but it works differently:
+                we select the area that we consider to be the background 
+                and this tool will even out the color:<br>
+                <img src="../img/galaxy/color_calibr_2.1.jpg"><br>
+                Select the background, click Use current selection and Background neutralization:<br>
+                <img src="../img/nebulae/Color Neutralize.jpg" width="1100px"><br>
+            </p>
 
+            <h2> 🟧(Moderate) Curves </h2>
+            <p>        
+                Using curves in GIMP we can get even more color:<br>
+                <img src="../img/galaxy/curves.jpg"><br>
+                Can be edited for each channel separately. 
+                We are interested in red and blue (although no one
+                forbids you to experiment, which is important):<br>
+                <img src="../img/nebulae/GIMP_curves_red.jpg" width="1100px"><br>
+                <br>
+                <img src="../img/nebulae/GIMP_curves_blue.jpg" width="1100px"><br>
+                The background has become a little blue, let's fix it using background extraction:<br>
+                <img src="../img/nebulae/last_BG.jpg" width="1100px"><br>
+                Save as starless.tif and then using Siril convert to starless.fit (open .tif in Siril and Save as .FIT 32 bit).
+            </p>
 
+            <h2> 🟩(Easy)-🟧(Moderate) Starmask</h2>
+            <p>   
+                Now let's process the stars. Open starmask and move the
+                top slider to the left side so that the stars are visible:<br>   
+                <img src="../img/nebulae/starmask_1.jpg"><br> 
+                SCNR:<br>
+                <img src="../img/nebulae/starmask_2.jpg" width="1100px"><br> 
+                Let's add saturation to the stars, the background factor can be reduced to zero:<br>
+                <img src="../img/nebulae/starmask_3.jpg" width="1100px"><br> 
+                Now stretch. Select Human weighted luminance to make the color more saturated:<br>
+                <img src="../img/nebulae/starmask_4.jpg" ><br> 
+                By changing the first and second sliders achieve the optimal number of stars:<br>
+                <img src="../img/nebulae/starmask_5.jpg" width="1100px"><br>
+                Save as starmask.fit 32 bit.
+                <h3> Star recomposition</h3>
+                Now let's return the stars:<br>
+                <img src="../img/nebulae/star_recomp_pixelmath.jpg" width="1100px"><br>  
+            </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <p>
+                And that's the end!<br>
+                <img src="../img/nebulae/end.jpg"><br> 
+                <br>
+                <br>
+                This guide is not perfect; you will see better processing in the <a href="gallery.html" class="link_to">Gallery</a> section,
+                where videos on my and other image processing will be shown. <font color="red"> <br>
+                If you notice a bug, error or have ideas on how to improve this guide,
+                <b>PLEASE</b> let me know on Discord: quark_coder(Quark#7359) </font>
+            </p> 
 		</div>
-
-    
 		  <hr>
 		  Contributors:<br>
 		  careless25, Lazulkat
