@@ -14,7 +14,7 @@
 			<div class="centered"> <font size="30" > Siril guide </font> </div>
 		</div>
 		
-        <div class="navbar">
+        <div id="navbar">
 			<a href="../index.html">Getting started</a>
 			<a href="preprocess.html"> Pre-process </a>
 			<div class="dropdown">
@@ -187,21 +187,27 @@
             <h2> 🟩(Easy) Noise reduction </h2>
             <p>     
                 Depending on the image quality, the amount of noise may vary. 
-                However, using a noise removal program, it is possible to obtain
-                more detail than without it. To do this, save the image as starless.tif
-                32 bit (.TIFF format). Then open the program, drag-and-drop the image, in
-                the settings on the right side, select Several noise and on Model Preference.
-                Press save.<br>
-                <img src="../img/galaxy/noise_reduct_1.jpg" ><br>
-                <br>
-                <img src="../img/galaxy/noise_reduct_2.jpg" ><br>   
+                However, using a GraXpert, it is possible to obtain
+                more detail than without it. To do this, save the image as starless.fit
+                32 bit (if graxpert gives an error when denoising, change to 16 bits).<br>
+
+                Load image:<br>
+                <img src="../img/galaxy/graxpert_load.png" ><br>
+                In tab 4 you can configure denoise. Since the program executes the 
+                primary process regardless of the selected parameter, you can leave it as is:<br>
+                <img src="../img/galaxy/graxpert_denoise.png"><br>
+                When the program finishes, you will see Denoised at the top. Now, by swapping 
+                two images, you can compare and change the Denoise strength to achieve an even,
+                 almost smooth image (after the first iteration, the denoise process occurs almost instantly):
+                 <img src="../img/galaxy/graxpert_compare.png" width="1100px"><br>
+                Once you get the result, save the image:<br>
+                <img src="../img/galaxy/graxpert_save.png" ><br>   
             </p>
 
             <h3>GHT</h3>
             <p>
                 After denoise the background became brighter. Let's fix this:<br>
                 <img src="../img/galaxy/make_bg_darker_after_denoise.jpg" width="1100px"><br>  
-
             </p>
 
             <h2> 🟧(Moderate) Wavelets(sharpness) </h2>

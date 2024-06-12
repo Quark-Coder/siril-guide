@@ -1,5 +1,12 @@
+
 .img-comp-container {
+  width: 500px;
+  height: 500px;
   position: relative;
+  margin-right: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .img-comp-img {
@@ -15,7 +22,7 @@
 
 .img-comp-slider {
   position: absolute;
-  z-index: 9;
+  z-index: 1;
   cursor: ew-resize;
   width: 40px;
   height: 40px;

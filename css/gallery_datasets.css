@@ -1,0 +1,62 @@
+.sublime {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.img-comp-container {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    margin-right: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    width: 920px; 
+}
+.info-description-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.info-description {
+    width: 380px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-links {
+    display: flex;
+    margin-top: 0;
+    position: absolute;
+    bottom: -85px;
+    left: 550px; 
+}
+
+.info-links img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.video-container {
+    margin-left: 20px;
+    width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}

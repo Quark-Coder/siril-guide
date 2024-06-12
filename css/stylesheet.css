@@ -9,12 +9,13 @@ html, body {
   color: white;
 }
 
-.navbar {
+#navbar {
   overflow: hidden;
   background-color: #2f2f2f;
+  z-index: 2;
 }
 
-.navbar a {
+#navbar a {
   float: left;
   font-size: 16px;
   color: white;
@@ -23,7 +24,8 @@ html, body {
   text-decoration: none;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+
+#navbar a:hover, .dropdown:hover .dropbtn {
   background-color:rgb(90, 89, 89);
 }
 
@@ -145,7 +147,7 @@ a.link.to:active {
 
 .dropdown-content a {
   float: none;
-  color: black;
+  color: black !important;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -179,3 +181,59 @@ body {
 .uppended {
   margin-top: 140mm;
 }
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery-item {
+  background-color: #666;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: background-color 0.3s;
+  width: 400px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.gallery-item:hover {
+  background-color: #777;
+}
+
+.gallery-item .item-text {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 24px;
+}
+
+.gallery-item .item-text .left-text, 
+.gallery-item .item-text .right-text {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery-item:link, 
+.gallery-item:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
