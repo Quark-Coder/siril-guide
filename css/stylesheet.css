@@ -83,7 +83,6 @@ a.link.to:active {
   color: white;
   padding: 16px;
   font-size: 16px;
-  border: none;
 }
 
 .dropdown {
@@ -99,16 +98,18 @@ a.link.to:active {
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
-  margin: 2;
+  margin: 0;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
+  min-width: 101px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 5;
+  flex-direction: column;
+  padding: 0;
 }
 
 .dropdown-content a {
@@ -125,7 +126,7 @@ a.link.to:active {
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+  display: flex;
 }
 
 .sheetTemplate {
