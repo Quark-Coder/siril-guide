@@ -10,9 +10,9 @@ html, body {
 }
 
 #navbar {
-  overflow: hidden;
   background-color: #2f2f2f;
-  z-index: 2;
+  z-index: 5;
+  height: 46px;
 }
 
 #navbar a {
@@ -86,40 +86,6 @@ a.link.to:active {
   border: none;
 }
 
-.dropup {
-  position: relative;
-  display: inline-block;
-  margin-left: 50%;
-  margin-top:50px;
-}
-
-.dropup-content {
-  display: none;
-  position: absolute;
-  bottom: 50px;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropup-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropup-content a:hover {background-color: rgb(135, 219, 9)}
-
-.dropup:hover .dropup-content {
-  display: block;
-}
-
-.dropup:hover .dropbtn {
-  background-color: rgb(58, 185, 41);
-}
-
 .dropdown {
   float: left;
   overflow: hidden;
@@ -133,7 +99,7 @@ a.link.to:active {
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
-  margin: 0;
+  margin: 2;
 }
 
 .dropdown-content {
@@ -142,7 +108,7 @@ a.link.to:active {
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 5;
 }
 
 .dropdown-content a {
@@ -235,5 +201,9 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+.sticky + .sheetTemplate {
+  padding-top: 45px;
 }
 

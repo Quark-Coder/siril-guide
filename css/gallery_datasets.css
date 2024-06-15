@@ -43,8 +43,8 @@
     display: flex;
     margin-top: 0;
     position: absolute;
-    bottom: -85px;
-    left: 550px; 
+    top: 743px;
+    left: 555px; 
 }
 
 .info-links img {

@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-
 <html>
-	<head>
-		<title> Siril guide </title>
-		<link type="text/css" rel="stylesheet" href="../css/stylesheet.css">
-    <script type="text/javascript" src="../js/sticky_navpan.js"></script>
-	</head>
-	
-	<body style="margin: 0;">
-		<div class="container">
+    <head>
+        <title> Siril guide </title>
+        <link type="text/css" rel="stylesheet" href="../css/stylesheet.css">
+        <script type="text/javascript" src="../js/sticky_navpan.js"></script>
+    </head>
+
+    <body style="margin: 0;">
+        <div class="container">
 			<div class="box">
 				<img src="../img/main.jpg" height="100%" width="100%">
 			</div>
@@ -19,86 +17,83 @@
 			<a href="../index.html">Getting started</a>
 			<a class="active" href="preprocess.html"> Pre-process </a>
 			<div class="dropdown">
-			  <button class="dropbtn">Processing
+			    <button class="dropbtn">Processing
 				<i class="fa fa-caret-down"></i>
-			  </button>
-			  <div class="dropdown-content">
-				<a href="galaxy.html">Galaxy</a>
-				<a href="nebula.html">Nebulae</a>
-				<!-- <a href="">Cluster</a> -->
-			  </div>
+			    </button>
+			    <div class="dropdown-content">
+				    <a href="galaxy.html">Galaxy</a>
+				    <a href="nebula.html">Nebulae</a>
+				    <!-- <a href="">Cluster</a>  -->
+			    </div>
 			</div> 
 			<a href="tools.html"> Tools </a>
 			<a href="gallery.html"> Gallery </a>
 			<a href="about.html"> About </a>
-		  </div>
+		</div>
 
-    <div class="sheetTemplate">
-	
-        <font size="5">
-            Monochrome (narrowband) imaging is used to increase sensitivity and detail.
+        <div class="sheetTemplate">
             <br>
-            <br> The main types of filters are:
-            <br> &nbsp;Ha - ionized hydrogen.
-            <br> &nbsp;Sii - ionized sulfur.
-            <br> &nbsp;Oiii - ionized oxygen.
-            <br>
-            <br> By mixing different combinations of images from different filters, a very large number of colors can be obtained in the resulting image.
-            <br>
-            <br> <big><b>SHO:</b></big>
-            <br> If images is not aligned (you can check this by quickly switching between images. If the stars move, the images are not aligned).
-            <br> <b>Otherwise, you can skip this step. </b>
-            <br> Drag-and-drop images to the conversion:
-            <br> <img src="../img/conversion1.png">
-            <br>Remember the name and location of the files!
-            <br>For me this is Ha – 1, Oiii – 2, Sii – 3.
-            <br><img src="../img/seq_name.png">
-            <br> Now let`s go to the registration: 
-            <br><img src="../img/reg.png">
-            <br> Now you have 3 aligned images, rename according to the conversion names (Ha – 1, Oiii – 2, Sii – 3):
-            <br><img src="../img/ren_bef.png">
-            <br><img src="../img/ren_aft.png">
-            <br> Now let`s stretch the images. 
-            <br> Open Ha image and press histogram transformation:
-            <br><img src="../img/hist.png">
-            <br>Press autostretch, apply and close.
-            <br><img src="../img/hist_gui.png">
-            <br> If your images are initially aligned, save as FITS 32 bit, otherwise just click the Save button:
-            <br><img src="../img/save_gui.png">
-            <br><img src="../img/save_fits.png">
-            <br> Make name more readable (don`t forget filter naming):
-            <br> <img src="../img/save_name.png"> 
-            <br> <img src="../img/savefits32.png"> 
-            <br> <b> Repeat this step for other images. </b>
-            <br> After stretching let`s combine it:
-            <br> <img src="../img/findpixelmath.png">
-            <br> Uncheck “Use single RGB/K expression” and press + sign:
-            <br> <img src="../img/pixelmathgui.png">
-            <br> By Shift+Left mouse click select all images and press Open:
-            <br> <img src="../img/selectimg.png">
-            <br> By double-clicking change names of this variables according to the naming of images:
-            <br> <img src="../img/changevar1.png">
-            <br> <img src="../img/changevar2.png">
-            <br> Now let`s add SHO formula:
-            <br> <img src="../img/pixelmathfromula.png">
-            <br> &nbsp;R:
-            <br> &nbsp;.6*Sii+.4*Ha
-            <br> &nbsp;G:
-            <br> &nbsp;.7*Ha+.3*Oiii
-            <br> &nbsp;B:
-            <br> &nbsp;Oiii
-            <br><font size="3" color="red">Please note that these are very conditional formulas! Ideally, you should change the settings depending on the DSO, as this is all very individual!</font>
-            <br> <img src="../img/pixelmathfinal.png">
-            <br> Then press Apply and close:
-            <br> <img src="../img/resultimg.png">
-            <br> Now process this as normal DSO =) Remember that the image is <b>ALREADY</b> prestretched!
-        </font> 
+            <font size="5">
+                Monochrome (narrowband) imaging is used to increase sensitivity and detail.
+                <br>
+                <br> The main types of filters are:
+                <br> &nbsp;Ha - ionized hydrogen.
+                <br> &nbsp;Sii - ionized sulfur.
+                <br> &nbsp;Oiii - ionized oxygen.
+                <br>
+                <br> By mixing different combinations of images from different filters, a very large number of colors can be obtained in the resulting image.
+                <br>
+                <br> <big><b>SHO:</b></big>
+                <br> If images is not aligned (you can check this by quickly switching between images. If the stars move, the images are not aligned).
+                <br> <b>Otherwise, you can skip this step. </b>
+                <br> Drag-and-drop images to the conversion:
+                <br> <img src="../img/conversion1.png">
+                <br>Remember the name and location of the files!
+                <br>For me this is Ha – 1, Oiii – 2, Sii – 3.
+                <br><img src="../img/seq_name.png">
+                <br> Now let`s go to the registration: 
+                <br><img src="../img/reg.png">
+                <br> Now you have 3 aligned images, rename according to the conversion names (Ha – 1, Oiii – 2, Sii – 3):
+                <br><img src="../img/ren_bef.png">
+                <br><img src="../img/ren_aft.png">
+                <br> Now let`s stretch the images. 
+                <br> Open Ha image and press histogram transformation:
+                <br><img src="../img/hist.png">
+                <br>Press autostretch, apply and close.
+                <br><img src="../img/hist_gui.png">
+                <br> If your images are initially aligned, save as FITS 32 bit, otherwise just click the Save button:
+                <br><img src="../img/save_gui.png">
+                <br><img src="../img/save_fits.png">
+                <br> Make name more readable (don`t forget filter naming):
+                <br> <img src="../img/save_name.png"> 
+                <br> <img src="../img/savefits32.png"> 
+                <br> <b> Repeat this step for other images. </b>
+                <br> After stretching let`s combine it:
+                <br> <img src="../img/findpixelmath.png">
+                <br> Uncheck “Use single RGB/K expression” and press + sign:
+                <br> <img src="../img/pixelmathgui.png">
+                <br> By Shift+Left mouse click select all images and press Open:
+                <br> <img src="../img/selectimg.png">
+                <br> By double-clicking change names of this variables according to the naming of images:
+                <br> <img src="../img/changevar1.png">
+                <br> <img src="../img/changevar2.png">
+                <br> Now let`s add SHO formula:
+                <br> <img src="../img/pixelmathfromula.png">
+                <br> &nbsp;R:
+                <br> &nbsp;.6*Sii+.4*Ha
+                <br> &nbsp;G:
+                <br> &nbsp;.7*Ha+.3*Oiii
+                <br> &nbsp;B:
+                <br> &nbsp;Oiii
+                <br><font size="3" color="red">Please note that these are very conditional formulas! Ideally, you should change the settings depending on the DSO, as this is all very individual!</font>
+                <br> <img src="../img/pixelmathfinal.png">
+                <br> Then press Apply and close:
+                <br> <img src="../img/resultimg.png">
+                <br> Now process this as normal DSO =) Remember that the image is <b>ALREADY</b> prestretched!
+        </div>
 
-    </div>
-    <hr>
-    <font size="5">
-    Contributors:<br>
-    careless25, Lazulkat
-    </font>
-	</body>
+        <hr>     
+        Contributors:<br>
+        careless25, Lazulkat
+    </body>
 </html>
