@@ -1,0 +1,177 @@
+<html>
+    <head>
+        <title> Siril guide </title>
+        <link type="text/css" rel="stylesheet" href="../../css/stylesheet.css">
+        <script type="text/javascript" src="../../js/sticky_navpan.js"></script>
+    </head>
+
+    <body style="margin: 0;">
+    <div class="container">
+        <div class="box">
+            <img src="../../img/main.jpg" height="100%" width="100%">
+        </div>
+    <div class="centered"> <font size="30" > Siril guide </font> </div>
+    </div>
+
+    <div id="navbar">
+        <a href="../../index.html">Getting started</a>
+        <a href="../preprocess.html"> Pre-process </a>
+        <div class="dropdown">
+            <button class="dropbtn">Processing
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="../galaxy.html">Galaxy</a>
+                <a href="../nebula.html">Nebulae</a>
+                <!-- <a href="">Cluster</a> -->
+            </div>
+        </div>
+        <a class="active" href="../tools.html"> Tools </a>
+        <a href="../gallery.html"> Gallery </a>
+        <a href="../about.html"> About </a>
+    </div>
+
+    <div class="sheetTemplate">
+        <font size="5">
+            <br>
+            <p>
+                StarNet++ is an extremely convenient and useful thing, however, in its original form, it uses only the
+                CPU and is very slow. For regular images that have not been drizzled, waiting a minute is most likely
+                not a big problem. However, if you need to process a comet, or a full frame 3x drizzled image, the time
+                can increase by orders of magnitude.
+            </p>
+
+            <p>
+                As a test of the speed of StarNet++ I will use an image with a resolution of 11072x7392:
+                <img src="../../img/tools/time_without_cuda.png"> <br>
+                6 minutes and 29 seconds. Long enough. What about resource consumption?
+                <img src="../../img/tools/usage_without_cuda.png"> <br>
+                Almost 80% of CPU usage on AMD 5 5600H.
+            </p>
+
+            <p>
+                It becomes obvious that it takes a lot of time to process large images and the CPU is highly loaded.
+                Since StarNet++ is a neural network in which many matrix calculations need to be performed, they can be
+                significantly accelerated using CUDA cores. <br>
+                <br>
+                First of all, it's worth checking if your GPU supports
+                <a href="https://developer.nvidia.com/cuda-gpus" target="_blank"> CUDA </a>  computing. <br>
+                There is some possibility that the GPU is not on the list, but it supports CUDA.
+                Some <a href="https://www.google.com/" target="_blank" >googling</a> will help.
+            </p>
+
+            <p>
+                The next step is to update the <a href="https://www.nvidia.com/en-us/drivers/"
+                                                  target="_blank">GPU drivers.</a>
+            </p>
+
+            <p>
+                <font size="6">Installing the CUDA SDK: </font> <br>
+                The most important part is installing the necessary CUDA components from NVIDIA. For tensorflow
+                (the library in which StarNet++ is written) to work correctly,
+                <a href="https://developer.nvidia.com/cuda-11.2.1-download-archive"
+                   target="_blank">CUDA version 11.2 </a> is required. <br>
+                Installing CUDA requires about 6 gigabytes of free space.
+            </p>
+
+            <p>
+                After running the installer and system check, an error may occur due to the fact that CUDA is already
+                installed. <br>
+                <img src="../../img/tools/install_already_have_newer_version.png"> <br>
+                <br>
+                To fix this, you need to uninstall all applications related to CUDA through the Windows utility
+                "Add or remove programs": <br>
+                <img src="../../img/tools/delete_cuda_1.png" width="500px">
+                <img src="../../img/tools/delete_cuda_2.png" width="500px">
+            </p>
+
+            <p>
+                The next step is to select custom options: <br>
+                <img src="../../img/tools/install_custom_advanced.png"> <br>
+            </p>
+
+            <p>
+                Uncheck these two parameters: <br>
+                <img src="../../img/tools/install_uncheck_1.png"> <br>
+            </p>
+
+            <p>
+                Sometimes an error may occur: <br>
+                <img src="../../img/tools/install_error.png"> <br>
+                To fix it, go back to the installer and uncheck these parameters. To see them, you need to
+                click on CUDA dropdown: <br>
+                <img src="../../img/tools/install_if_error_uncheck_2.png"> <br>
+                After that, CUDA should be installed successfully:
+                <img src="../../img/tools/cuda_installed.png"> <br>
+            </p>
+
+            <p>
+                <font size="6">Adding libraries: </font> <br>
+                In order for CUDA to work with StarNet++, you need to add the appropriate libraries to the right
+                places. <br>
+                You need to download the <a href="https://developer.nvidia.com/rdp/cudnn-archive"
+                                            target="_blank">cuDNN 8.1</a> library. To do this, you need to register
+                an NVIDIA account, if you don't have one yet. <br>
+                <img src="../../img/tools/download_cudnn.png"> <br>
+                As well as <a href="https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow-gpu-windows-x86_64-2.10.0.zip"
+                              target="_blank">tensorflow</a> library, which supports GPU acceleration. <br>
+                Now you need to open the environmental variables so that the system can use CUDA, as well as
+                for an additional flag. <br>
+                <img src="../../img/tools/edit_environ.png"> <br>
+                <br>
+                <img src="../../img/tools/environ.png"> <br>
+                <br>
+                You need to check if CUDA has created its own variables: <br>
+                <img src="../../img/tools/check_cuda_path.png"> <br>
+                <br>
+                You also need to create a separate variable: <br>
+                <img src="../../img/tools/create_env.png"> <br>
+                <br>
+                <b>TF_FORCE_GPU_ALLOW_GROWTH</b> with a variable value <b>true</b><br>
+                <img src="../../img/tools/new_env.png"> <br>
+                <br>
+                Be sure to press OK on each step! <br>
+                <img src="../../img/tools/press_ok.png"> <br>
+                <br>
+                CUDA is located in <b>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2</b> folder <br>
+                <br>
+                Copy <b>libtensorflow\include\tensorflow</b> folder to <b>CUDA\v11.2\include</b> folder <br>
+                <img src="../../img/tools/tensorflow_to_include.png"> <br>
+                <br>
+                Copy <b>libtensorflow\lib\tensorflow.lib</b> file to <b>CUDA\v11.2\lib</b> folder <br>
+                <img src="../../img/tools/tens_lib_to_cuda_lib.png"> <br>
+                <br>
+                Copy all files from <b>cudnn\cuda\bin</b> folder to <b>CUDA\v11.2\bin </b>folder <br>
+                <img src="../../img/tools/cudnn_bin_to_cuda_bin.png"> <br>
+                <br>
+                Copy all files from <b>cudnn\cuda\include</b> folder to <b>CUDA\v11.2\include </b>folder <br>
+                <img src="../../img/tools/cudnn_include_to_cuda_include.png"> <br>
+                <br>
+                Replace <b>starnet++_cli\tensorflow.dll</b> with <b>libtensorflow\lib\tensorflow.dll</b>
+                <img src="../../img/tools/replace_tensorflow_to_starnet.png"> <br>
+                <br>
+                <b>Restart the computer.</b> <br>
+                <br>
+            </p>
+
+            <p>
+                Has it produced any results? Definitely! <br>
+                <img src="../../img/tools/usage_with_cuda.png"> <br>
+                <br>
+                And also faster! <br>
+                <img src="../../img/tools/time_with_cuda.png"> <br>
+
+            </p>
+
+        </font>
+
+    </div>
+
+    <hr>
+    <font size="5">
+        Contributors:<br>
+        careless25, Lazulkat
+    </font>
+    </body>
+
+</html>
