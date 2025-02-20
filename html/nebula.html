@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
 	<head>
 		<title> Siril guide </title>
 		<link type="text/css" rel="stylesheet" href="../css/stylesheet.css">
@@ -8,32 +8,31 @@
 	<body style="margin: 0;">
 		<div class="container">
 			<div class="box">
-				<img src="../img/main.jpg" height="100%" width="100%">
+				<img src="../img/main.jpg" height="100%" width="100%" alt="Main">
 			</div>
-			<div class="centered"> <font size="30" > Siril guide </font> </div>
+			<div class="centered"> <span style="font-size:50px;">Siril guide</span> </div>
 		</div>
 		
 		<div id="navbar">
 			<a href="../index.html">Getting started</a>
 			<a href="preprocess.html"> Pre-process </a>
 			<div class="dropdown">
-			  <button class="dropbtn">Processing
-				<i class="fa fa-caret-down"></i>
-			  </button>
-			  <div class="dropdown-content">
-				<a href="galaxy.html">Galaxy</a>
-				<a class="active" href="nebula.html">Nebulae</a>
-				<!-- <a href="">Cluster</a> -->
-			  </div>
+                <button class="dropbtn">Processing
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="galaxy.html">Galaxy</a>
+                    <a class="active" href="nebula.html">Nebulae</a>
+                    <!-- <a href="">Cluster</a> -->
+                </div>
 			</div> 
 			<a href="tools.html"> Tools </a>
 			<a href="gallery.html"> Gallery </a>
 			<a href="about.html"> About </a>
-
 		</div>
 
 		<div class="sheetTemplate">
-		<font size="5">
+		<span style="font-size: 1.5em">
             <br>
 			<i>This guide will use this data:<a class="link_to" href="https://drive.google.com/file/d/1pdsMSi5WrL6OJ4YeRFLjZrL0C8zEPjLw/view?usp=drive_link" target="_blank">Eastern Veil</a></i>
 			<p> 
@@ -55,23 +54,25 @@
                 recommended to completely repeat the process in these tools; you need to select the parameters yourself.
             </p>
 
-            <p> <font color="red">
-                Please note that this guide shows the possibilities of using various tools,
-                but this does not mean that you should completely copy my processing method. 
-                Experiment, swap tools, repeat BGE or color saturation several times - complete
-                freedom of action. So you will most likely be able to process it better than me ^_^
-            </p> </font>
+            <p>
+                <span style="color: red;">
+                    Please note that this guide shows the possibilities of using various tools,
+                    but this does not mean that you should completely copy my processing method. 
+                    Experiment, swap tools, repeat BGE or color saturation several times - complete
+                    freedom of action. So you will most likely be able to process it better than me ^_^
+                </span>
+            </p> 
 
 			<p>
                 Let's enable Autostretch:<br>
-                <img src="../img/galaxy/autostretch.jpg"><br>
+                <img src="../img/galaxy/autostretch.jpg" alt="Autostretch"><br>
                 Quite often you will notice that the entire image is very green or red. 
                 In order to see something, you need unchain channels.<br>
-                <img src="../img/galaxy/unchain.jpg"><br>
+                <img src="../img/galaxy/unchain.jpg" alt="Autostretch"><br>
                 Now we need a crop in order to remove stacking artifacts 
                 (they are close to the image borders), and also to make the galaxy better visible.
                 Hold down the left mouse button, draw a rectangle, center it on the galaxy and press the right button. <br>
-                <img src="../img/nebulae/crop.jpg" width="1110px"><br>
+                <img src="../img/nebulae/crop.jpg" width="1110px" alt="Autostretch"><br>
             </p>
 
 			<h2> 🟧(Moderate)-🟥(Hard) Color calibration </h2>
@@ -79,26 +80,26 @@
                 Color calibration allows you to adjust the color of the entire image.
                 This will also correct any green or red color you may have seen in the beginning. <br> 
                 Let's use PCC (Photometric Color Calibration): <br>
-                <img src="../img/galaxy/color_calibr_1.jpg">
-                <img src="../img/galaxy/color_calibr_2.jpg" style="vertical-align: top;"> <br>
+                <img src="../img/galaxy/color_calibr_1.jpg" alt="Calibration">
+                <img src="../img/galaxy/color_calibr_2.jpg" style="vertical-align: top;" alt="Calibration"> <br>
                 Find your object (if you don't know what it's called, use 
                 <a class="link_to" href="https://google.com" target="_blank">Google</a> or 
                 <a class="link_to" href="https://nova.astrometry.net/upload" target="_blank">Astrometry</a>).
                 Enter the focal length and pixel size (for this object 1284.7mm and 4.63μm).<br>
-                <img src="../img/nebulae/PCC.jpg"> <br>
+                <img src="../img/nebulae/PCC.jpg" alt="Calibration"> <br>
                 Wait for the PCC to complete its work:<br>
-                <img src="../img/nebulae/PCC_console.jpg"> <br>
+                <img src="../img/nebulae/PCC_console.jpg" alt="Calibration"> <br>
             </p>
 
 			<h2> 🟩(Easy) StarNet++ </h2>
             <p> 
                 Now let`s run Starnet: <br>
-                <img src="../img/galaxy/star_procc_1.jpg"> 
-                <img src="../img/galaxy/star_procc_2.jpg" style="vertical-align: top;"> <br>
+                <img src="../img/galaxy/star_procc_1.jpg" alt="StarNet"> 
+                <img src="../img/galaxy/star_procc_2.jpg" style="vertical-align: top;" alt="StarNet"> <br>
                 Check the linear image pre-stretch checkbox: <br>
-                <img src="../img/galaxy/star_procc_3.jpg"> <br>
-                <font color="red">It will take some time...</font> <br>
-                <img src="../img/galaxy/star_procc_4.jpg"> <br>
+                <img src="../img/galaxy/star_procc_3.jpg" alt="StarNet"> <br>
+                <span style="color: red;">It will take some time...</span> <br>
+                <img src="../img/galaxy/star_procc_4.jpg" alt=""> <br>
             </p>
 
 			<h2> 🟥(Hard) GHT (Generalized Hyperbolic Transformations) AKA Stretch </h2>
@@ -106,37 +107,37 @@
                 Stretching is the second most important task in all processing.
                 This is where you get all the detail that makes astrophotography so interesting.
                 First we need to do a preliminary stretch to see the object:<br>
-                <img src="../img/galaxy/ght_1.jpg"> <br>
+                <img src="../img/galaxy/ght_1.jpg" alt="GHT"> <br>
                 Select the logarithmic scale check box and move local stretch intensity slider to the max (15.0):<br>
-                <img src="../img/nebulae/GHT_1.jpg"> <br>
+                <img src="../img/nebulae/GHT_1.jpg" alt="GHT"> <br>
                 Now, by changing the Stretch factor you need to shift the peak of the histogram two squares to the right: <br>
-                <img src="../img/nebulae/GHT_2.jpg" width="1100px"> <br>
+                <img src="../img/nebulae/GHT_2.jpg" width="1100px" alt="GHT"> <br>
 
-				<a name="black_points">Now let`s make background darker. Click on the area where the histogram peak is located.</a>
-                Afterwards, move the Highlight protection slider so that it is identical to the
+				<a id="black_points">Now let`s make background darker. Click on the area where the histogram peak is located.</a>
+                Afterward, move the Highlight protection slider so that it is identical to the
                 Symmetry point slider. Also set local stretch intensity to max:<br>
-                <img src="../img/nebulae/GHT_3.jpg"><br>
+                <img src="../img/nebulae/GHT_3.jpg" alt="GHT"><br>
                 Now, changing the linear stretch, shift the histogram to the left until there is a small gap left:<br>
-                <img src="../img/nebulae/GHT_4.jpg" width="1100px"><br>
+                <img src="../img/nebulae/GHT_4.jpg" width="1100px" alt="GHT"><br>
                 Now let's repeat the Stretch.
-                <img src="../img/nebulae/GHT_5.jpg" width="1100px"><br>
+                <img src="../img/nebulae/GHT_5.jpg" width="1100px" alt="GHT"><br>
             </p>
 
 			<h2> 🟩(Easy) BGE (BackGround Extraction) </h2>
             <p> 
                 This tool allows you to align and make the background more uniform:<br>
-                <img src="../img/galaxy/BGE.jpg"> <br>
+                <img src="../img/galaxy/BGE.jpg" alt="BGE"> <br>
                 Click Generate to create a grid of samples:<br>
-                <img src="../img/galaxy/BGE_2.jpg"> <br>
-                <img src="../img/nebulae/BGE_1.jpg"> <br>
+                <img src="../img/galaxy/BGE_2.jpg" alt="BGE"> <br>
+                <img src="../img/nebulae/BGE_1.jpg" alt="BGE"> <br>
                 Now, by clicking the left mouse button to create a 
                 sample and the right mouse button to delete it, we need to edit the grid
                 so that the samples only go to the background and not to the object:<br>
-                <img src="../img/nebulae/BGE_2.jpg"> <br>
+                <img src="../img/nebulae/BGE_2.jpg" alt="BGE"> <br>
                 When you have edited the grid, click Compute background and Apply:<br>
-                <img src="../img/galaxy/BGE_5.jpg"> <br>
+                <img src="../img/galaxy/BGE_5.jpg" alt="BGE"> <br>
                 Now the background looks smooth: <br>
-                <img src="../img/nebulae/BGE_3.jpg"><br>
+                <img src="../img/nebulae/BGE_3.jpg" alt="BGE"><br>
             </p>
 
 			<h3>GHT</h3>
@@ -144,23 +145,23 @@
 				Now let`s again do several stretch and background darkenings. At stretch you must get as much detail as possible, 
                 but you must not overexpose the nebulae, especially the brightest parts. If you see that the nebulae parts 
                 are too bright, move the local stretch intensity slider to the right until it becomes less bright:<br>
-                <img src="../img/nebulae/Next_GHT_1.jpg"><br>
+                <img src="../img/nebulae/Next_GHT_1.jpg" alt="GHT"><br>
                 <br>
-                <img src="../img/nebulae/Next_GHT_2.jpg" width="1100px"><br>
+                <img src="../img/nebulae/Next_GHT_2.jpg" width="1100px" alt="GHT"><br>
                 <br>
-                <img src="../img/nebulae/Next_GHT_3.jpg" width="1100px"><br>
+                <img src="../img/nebulae/Next_GHT_3.jpg" width="1100px" alt="GHT"><br>
                 <br>
-                <img src="../img/nebulae/Next_GHT_4.jpg" width="1100px"><br>
+                <img src="../img/nebulae/Next_GHT_4.jpg" width="1100px" alt="GHT"><br>
             </p>
 
 			<h2> 🟧(Moderate) CLAHE(Contrast-Limited Adaptive Histogram Equalisation) </h2>
             <p>   
                 This tool allows you to get even more detail: <br> 
-                <img src="../img/galaxy/contrast_limited_1.jpg" ><br>
+                <img src="../img/galaxy/contrast_limited_1.jpg"  alt="CLAHE"><br>
                 If you overdo it, the background will become noisy too.
                 Adjust the tiles grid size until you get more detail without
                 artifacts or looking too unnatural:<br>
-                <img src="../img/nebulae/CLAHE.jpg" width="1100px"><br>
+                <img src="../img/nebulae/CLAHE.jpg" width="1100px" alt="CLAHE"><br>
             </p>
 
 			<h2> 🟩(Easy) Noise reduction </h2>
@@ -171,63 +172,60 @@
                 32 bit (if graxpert gives an error when denoising, change to 16 bits).<br>
 
                 Load image:<br>
-                <img src="../img/galaxy/graxpert_load.png" ><br>
+                <img src="../img/galaxy/graxpert_load.png"  alt="Noise reduction"><br>
                 In tab 4 you can configure denoise. Since the program executes the 
                 primary process regardless of the selected parameter, you can leave it as is:<br>
-                <img src="../img/galaxy/graxpert_denoise.png"><br>
+                <img src="../img/galaxy/graxpert_denoise.png" alt="Noise reduction"><br>
                 When the program finishes, you will see Denoised at the top. Now, by swapping 
                 two images, you can compare and change the Denoise strength to achieve an even,
-                 almost smooth image (after the first iteration, the denoise process occurs almost instantly):
-                 <img src="../img/galaxy/graxpert_compare.png" width="1100px"><br>
+                almost smooth image (after the first iteration, the denoise process occurs almost instantly):
+                <img src="../img/galaxy/graxpert_compare.png" width="1100px" alt="Noise reduction"><br>
                 Once you get the result, save the image:<br>
-                <img src="../img/galaxy/graxpert_save.png" ><br>   
+                <img src="../img/galaxy/graxpert_save.png"  alt="Noise reduction"><br>   
             </p>
 
             <h3>BGE</h3>
             <p>
 				Repeat BGE after Denoise to make the background more uniform:<br>
-                <img src="../img/nebulae/Another_BGE_1.jpg"><br>
+                <img src="../img/nebulae/Another_BGE_1.jpg" alt="BGE"><br>
             </p>
 
             <h3>GHT</h3>
             <p>
 				Now use GHT again to make the background darker:<br>
-                <img src="../img/nebulae/Next_Next_GHT_1.jpg" width="1100px"><br>
+                <img src="../img/nebulae/Next_Next_GHT_1.jpg" width="1100px" alt="GHT"><br>
                 A little stretch: <br>
-                <img src="../img/nebulae/Next_Next_GHT_2.jpg" width="1100px"><br>
+                <img src="../img/nebulae/Next_Next_GHT_2.jpg" width="1100px" alt="GHT"><br>
                 And again make the background darker:<br>
-                <img src="../img/nebulae/Next_Next_GHT_3.jpg" width="1100px"><br>
+                <img src="../img/nebulae/Next_Next_GHT_3.jpg" width="1100px" alt="GHT"><br>
             </p>
 
             <h2> 🟧(Moderate) Wavelets(sharpness) </h2>
             <p>     
                 Another tool that will increase the detail of the object. <br>
-                <img src="../img/galaxy/wavelets_1.jpg" ><br>
+                <img src="../img/galaxy/wavelets_1.jpg"  alt="Wavelets"><br>
                 Press Execute:<br>
-                <img src="../img/galaxy/wavelets_2.jpg" ><br>
+                <img src="../img/galaxy/wavelets_2.jpg"  alt="Wavelets"><br>
                 It will also easily increase the noise if you overdo it. Each
                 subsequent slider affects more significant details. This means 
                 that the first slider affects extremely fine detail, and, for example,
                 the second and third affect the dust ring. Select the parameters so that
                 the final image does not look too synthetic and does not change the color
                 too much (wavelets generate green noise):<br>
-                <img src="../img/nebulae/Wavelets_1.jpg" width="1100px"><br>
+                <img src="../img/nebulae/Wavelets_1.jpg" width="1100px" alt="Wavelets"><br>
                 <br>
-                <img src="../img/nebulae/Wavelets_2.jpg" width="1100px"><br>   
-            </p
-
-
-            <h></h>
+                <img src="../img/nebulae/Wavelets_2.jpg" width="1100px" alt="Wavelets"><br>   
+            </p>
 
             <h2>🟧(Moderate) Asinh Transformation </h2>
             <p>        
                 This tool allows you to quickly change the brightness
                 of the entire image and how dark your background will be.
                 This can be done using GHT, but Asinh can be used for small adjustments:<br>
-                <img src="../img/galaxy/asinh_1.jpg" ><br>  
+                <img src="../img/galaxy/asinh_1.jpg"  alt="Asinh"><br>  
                 By increasing the number of black points you can make the background 
                 darker, but do not overdo it, the background should not be completely black:<br>
-                <img src="../img/nebulae/Asinh_1.jpg" width="1100px" ><br>  
+                <img src="../img/nebulae/Asinh_1.jpg" width="1100px"  alt="Asinh"><br>  
             </p>
 
             <h2> 🟥(Hard) Masking </h2>
@@ -239,72 +237,72 @@
                 not have a built-in function for generating masks (which, for example, PixInsight
                 has), so this process is done manually and is quite complicated.<br>
                 <br>
-                <a name="split_rgb">First you need to extract color channels from the image in order to work with them further:</a>
-                <img src="../img/galaxy/extract_RGB_1.jpg">
-                <img src="../img/galaxy/extract_RGB_2.jpg" style="vertical-align: top;"><br> 
+                <a id="split_rgb">First you need to extract color channels from the image in order to work with them further:</a>
+                <img src="../img/galaxy/extract_RGB_1.jpg" alt="Masking">
+                <img src="../img/galaxy/extract_RGB_2.jpg" style="vertical-align: top;" alt="Masking"><br> 
                 For ease of understanding, call channels by their proper names:<br>
-                <img src="../img/galaxy/extract_RGB_3.jpg"> <br>
+                <img src="../img/galaxy/extract_RGB_3.jpg" alt="Masking"> <br>
                 Now let's open the blue channel:<br>
-                <img src="../img/nebulae/Open_B_channel.jpg"><br>
+                <img src="../img/nebulae/Open_B_channel.jpg" alt="Masking"><br>
                 Then we use GHT to select the object. To do this, select linear stretch:<br>
-                <img src="../img/nebulae/Linear_stretch.jpg"><br>
+                <img src="../img/nebulae/Linear_stretch.jpg" alt="Masking"><br>
                 Now, by moving the slider, we need to get rid of the background, 
                 otherwise it will spoil the image, but at the same time we need to
                 preserve the outline of the galaxy:<br>
-                <img src="../img/nebulae/Linear_Blue.jpg" width="1100px"><br>
+                <img src="../img/nebulae/Linear_Blue.jpg" width="1100px" alt="Masking"><br>
                 However, the problem is that the background is still not
                 black, and this is important for masks. To see the background,
                 look under the image monitor in Siril. You will notice two sliders. 
                 Move the top slider to the left until you see white dots:<br>
-                <img src="../img/galaxy/how_to_see_background.jpg"><br>
+                <img src="../img/galaxy/how_to_see_background.jpg" alt="Masking"><br>
                 To remove them, you can use the built-in filling function in Siril, or using GIMP:<br>
-                <img src="../img/nebulae/White_dots.jpg"><br>
+                <img src="../img/nebulae/White_dots.jpg" alt="Masking"><br>
                 Open the image in GIMP, be sure to click Keep:<br>
-                <img src="../img/nebulae/Keep_GIMP.jpg"><br>
+                <img src="../img/nebulae/Keep_GIMP.jpg" alt="Masking"><br>
                 After that, find paintbrush:<br>
-                <img src="../img/galaxy/gimp_2.2.jpg"><br>
+                <img src="../img/galaxy/gimp_2.2.jpg" alt="Masking"><br>
                 Now configure the settings as shown:<br>
-                <img src="../img/galaxy/gimp_2.3.jpg"><br>
+                <img src="../img/galaxy/gimp_2.3.jpg" alt="Masking"><br>
                 Walk over the entire background without hitting the object.<br>
                 <br>
                 Then save it as B-mask.tif:<br>
-                <img src="../img/nebulae/Save_GIMP.jpg" width="750px">
-                <img src="../img/galaxy/gimp_6.jpg" style="vertical-align: top;"><br>
+                <img src="../img/nebulae/Save_GIMP.jpg" width="750px" alt="Masking">
+                <img src="../img/galaxy/gimp_6.jpg" style="vertical-align: top;" alt="Masking"><br>
                 This is what you should get:<br>
-                <img src="../img/nebulae/GIMP_Result.jpg"><br>
+                <img src="../img/nebulae/GIMP_Result.jpg" alt="Masking"><br>
                 Now let's open B.fit again, but this time we'll highlight the brightest part - the core.
                 Since there are a lot of black points, there is no point in cleaning the background in GIMP:<br>
-                <img src="../img/nebulae/Linear_Blue_2.jpg" width="1100px"><br>
+                <img src="../img/nebulae/Linear_Blue_2.jpg" width="1100px" alt="Masking"><br>
                 <h3>Pixelmath</h3>
                 Pixelmath is a tool for combining layers. With it we can apply the masks we made:<br>
-                <img src="../img/galaxy/pixelmath_1.jpg"><br>
+                <img src="../img/galaxy/pixelmath_1.jpg" alt="Masking"><br>
                 Uncheck Use single RGB/K... and press plus sign:<br>
-                <img src="../img/galaxy/pixelmath_2.jpg"><br>
+                <img src="../img/galaxy/pixelmath_2.jpg" alt="Masking"><br>
                 Select all files (R,G,B, masks and cores) by holding Shift and clicking the left mouse button:<br>
-                <img src="../img/nebulae/PixelMath_1.jpg"><br>
+                <img src="../img/nebulae/PixelMath_1.jpg" alt="Masking"><br>
                 Now we see our files as variables:<br>
-                <img src="../img/nebulae/PixelMath_2.jpg"><br>
-                Change them according to the content of the image by double clicking on it:<br>
-                <img src="../img/nebulae/PixelMath_3.jpg"><br>
+                <img src="../img/nebulae/PixelMath_2.jpg" alt="Masking"><br>
+                Change them according to the content of the image by double-clicking on it:<br>
+                <img src="../img/nebulae/PixelMath_3.jpg" alt="Masking"><br>
                 Now enter the appropriate layers in the lines and click Apply to see the initial image:<br>
-                <img src="../img/nebulae/PixelMath_4.jpg" width="1100px"><br>
+                <img src="../img/nebulae/PixelMath_4.jpg" width="1100px" alt="Masking"><br>
                 Now, we need to add the corresponding masks to the corresponding colors.
                 From the masks we subtract the cores so that they do not overexpose
                 the already bright core. By selecting the brightness of these masks
-                we achieve a good color.<font color="red"> Everything here is very individual and you
-                need to experiment.</font> For example, to highlight the details of one mask,
+                we achieve a good color.<span style="color: red;"> Everything here is very individual and you
+                need to experiment.</span> For example, to highlight the details of one mask,
                 you can subtract the brighter mask from another:<br>
-                <img src="../img/nebulae/PixelMath_5.jpg" width="1100px"><br>
+                <img src="../img/nebulae/PixelMath_5.jpg" width="1100px" alt="Masking"><br>
             </p>
 
             <h2> 🟧(Moderate) Color saturation </h2>
             <p>        
                 After adding masks the image is still quite pale, let's fix that with this tool:<br>
-                <img src="../img/galaxy/color_saturation_1.jpg"><br>
+                <img src="../img/galaxy/color_saturation_1.jpg" alt="Saturation"><br>
                 Here you can select either a separate color that you want to enhance, or all at once.
-                The lower the Background factor, the more the duller details are colored, right down
+                The lower the Background factor, the more, the duller details are colored, right down
                 to the background itself:<br>
-                <img src="../img/nebulae/ColorCalibr_1.jpg" width="1100px"><br>
+                <img src="../img/nebulae/ColorCalibr_1.jpg" width="1100px" alt="Saturation"><br>
             </p>
 
             <h2> 🟩(Easy) SCNR(Green noise reduction) </h2>
@@ -313,9 +311,9 @@
                 image definitely has green noise. This is because color cameras typically
                 have twice as many green pixels as red and blue pixels. However, green noise
                 also appears during processing, even if it was not there initially:<br>
-                <img src="../img/galaxy/green_noise_1.jpg"> <br>
+                <img src="../img/galaxy/green_noise_1.jpg" alt="SCNR"> <br>
                 No more green:<br>
-                <img src="../img/nebulae/SCNR.jpg"><br>
+                <img src="../img/nebulae/SCNR.jpg" alt="SCNR"><br>
             </p>
 
             <h3> Background Neutralization </h3>
@@ -323,23 +321,23 @@
                 This is a tool similar to PCC, but it works differently:
                 we select the area that we consider to be the background 
                 and this tool will even out the color:<br>
-                <img src="../img/galaxy/color_calibr_2.1.jpg"><br>
+                <img src="../img/galaxy/color_calibr_2.1.jpg" alt="Neutralization"><br>
                 Select the background, click Use current selection and Background neutralization:<br>
-                <img src="../img/nebulae/Color Neutralize.jpg" width="1100px"><br>
+                <img src="../img/nebulae/Color Neutralize.jpg" width="1100px" alt="Neutralization"><br>
             </p>
 
             <h2> 🟧(Moderate) Curves </h2>
             <p>        
                 Using curves in GIMP we can get even more color:<br>
-                <img src="../img/galaxy/curves.jpg"><br>
+                <img src="../img/galaxy/curves.jpg" alt="Curves"><br>
                 Can be edited for each channel separately. 
                 We are interested in red and blue (although no one
                 forbids you to experiment, which is important):<br>
-                <img src="../img/nebulae/GIMP_curves_red.jpg" width="1100px"><br>
+                <img src="../img/nebulae/GIMP_curves_red.jpg" width="1100px" alt="Curves"><br>
                 <br>
-                <img src="../img/nebulae/GIMP_curves_blue.jpg" width="1100px"><br>
+                <img src="../img/nebulae/GIMP_curves_blue.jpg" width="1100px" alt="Curves"><br>
                 The background has become a little blue, let's fix it using background extraction:<br>
-                <img src="../img/nebulae/last_BG.jpg" width="1100px"><br>
+                <img src="../img/nebulae/last_BG.jpg" width="1100px" alt="Curves"><br>
                 Save as starless.tif and then using Siril convert to starless.fit (open .tif in Siril and Save as .FIT 32 bit).
             </p>
 
@@ -347,15 +345,15 @@
             <p>   
                 Now let's process the stars. Open starmask and move the
                 top slider to the left side so that the stars are visible:<br>   
-                <img src="../img/nebulae/starmask_1.jpg"><br> 
+                <img src="../img/nebulae/starmask_1.jpg" alt="Starmask"><br> 
                 SCNR:<br>
-                <img src="../img/nebulae/starmask_2.jpg" width="1100px"><br> 
+                <img src="../img/nebulae/starmask_2.jpg" width="1100px" alt="Starmask"><br> 
                 Let's add saturation to the stars, the background factor can be reduced to zero:<br>
-                <img src="../img/nebulae/starmask_3.jpg" width="1100px"><br> 
+                <img src="../img/nebulae/starmask_3.jpg" width="1100px" alt="Starmask"><br> 
                 Now stretch. Select Human weighted luminance to make the color more saturated:<br>
-                <img src="../img/nebulae/starmask_4.jpg" ><br> 
+                <img src="../img/nebulae/starmask_4.jpg"  alt="Starmask"><br> 
                 By changing the first and second sliders achieve the optimal number of stars:<br>
-                <img src="../img/nebulae/starmask_5.jpg" width="1100px"><br>
+                <img src="../img/nebulae/starmask_5.jpg" width="1100px" alt="Starmask"><br>
                 Save as starmask.fit 32 bit.
                 <h3><a id="better_stars"> Star recomposition</a></h3>
                 Now let's return the stars using this equation:<br>
@@ -363,23 +361,27 @@
                 ~((~starless)*(~starmask))<br>
                 <br>
                 This equation saves your stars from being clipped:
-                <img src="../img/nebulae/star_recomp_pixelmath.jpg" width="1100px"><br>  
+                <img src="../img/nebulae/star_recomp_pixelmath.jpg" width="1100px" alt="Starmask"><br>  
             </p>
 
             <p>
                 And that's the end!<br>
-                <img src="../img/nebulae/end.jpg"><br> 
+                <img src="../img/nebulae/end.jpg" alt="End"><br>
                 <br>
                 <br>
                 This guide is not perfect; you will see better processing in the <a href="gallery.html" class="link_to">Gallery</a> section,
-                where videos on my and other image processing will be shown. <font color="red"> <br>
+                where videos on my and other image processing will be shown. <span style="color: red;"> <br>
                 If you notice a bug, error or have ideas on how to improve this guide,
-                <b>PLEASE</b> let me know on Discord: quark_coder(Quark#7359) </font>
-            </p> 
+                <b>PLEASE</b> let me know on Discord: quark_coder(Quark#7359) </span>
+            </p>
+
+        </span>
 		</div>
-		  <hr>
-		  Contributors:<br>
-		  careless25, Lazulkat
+
+        <span style="font-size: 1.13em">
+            <hr>
+            Contributors:<br>
+            careless25, Lazulkat
+        </span>
 	</body>
-	
 </html>

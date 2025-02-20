@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
     <head>
         <title> Siril guide </title>
         <link type="text/css" rel="stylesheet" href="../../css/stylesheet.css">
@@ -8,9 +8,9 @@
     <body style="margin: 0;">
     <div class="container">
         <div class="box">
-            <img src="../../img/main.jpg" height="100%" width="100%">
+            <img src="../../img/main.jpg" height="100%" width="100%" alt="Main">
         </div>
-    <div class="centered"> <font size="30" > Siril guide </font> </div>
+    <div class="centered"> <span style="font-size:50px;">Siril guide</span> </div>
     </div>
 
     <div id="navbar">
@@ -32,9 +32,9 @@
     </div>
 
     <div class="sheetTemplate">
-        <font size="5">
+        <span style="font-size: 1.5em">
             <br>
-            <font size="6">For Windows only(for now =) ): </font> <br>
+            <span style="font-size: 2em"> For Windows only =) </span> <br>
 
             <p>
                 StarNet++ is an extremely convenient and useful thing, however, in its original form, it uses only the
@@ -45,9 +45,9 @@
 
             <p>
                 As a test of the speed of StarNet++ I will use an image with a resolution of 11072x7392:
-                <img src="../../img/tools/time_without_cuda.png"> <br>
+                <img src="../../img/tools/time_without_cuda.png" alt="Test"> <br>
                 6 minutes and 29 seconds. Long enough. What about resource consumption?
-                <img src="../../img/tools/usage_without_cuda.png"> <br>
+                <img src="../../img/tools/usage_without_cuda.png" alt="Test"> <br>
                 Almost 80% of CPU usage on AMD 5 5600H.
             </p>
 
@@ -68,7 +68,7 @@
             </p>
 
             <p>
-                <font size="6">Installing the CUDA SDK: </font> <br>
+                <span style="font-size: 2em">Installing the CUDA SDK: </span> <br>
                 The most important part is installing the necessary CUDA components from NVIDIA. For tensorflow
                 (the library in which StarNet++ is written) to work correctly,
                 <a href="https://developer.nvidia.com/cuda-11.2.1-download-archive"
@@ -79,78 +79,78 @@
             <p>
                 After running the installer and system check, an error may occur due to the fact that CUDA is already
                 installed. <br>
-                <img src="../../img/tools/install_already_have_newer_version.png"> <br>
+                <img src="../../img/tools/install_already_have_newer_version.png" alt="Already installed"> <br>
                 <br>
                 To fix this, you need to uninstall all applications related to CUDA through the Windows utility
                 "Add or remove programs": <br>
-                <img src="../../img/tools/delete_cuda_1.png" width="500px">
-                <img src="../../img/tools/delete_cuda_2.png" width="500px">
+                <img src="../../img/tools/delete_cuda_1.png" width="500px" alt="Programs">
+                <img src="../../img/tools/delete_cuda_2.png" width="500px" alt="Programs">
             </p>
 
             <p>
                 The next step is to select custom options: <br>
-                <img src="../../img/tools/install_custom_advanced.png"> <br>
+                <img src="../../img/tools/install_custom_advanced.png" alt="Options"> <br>
             </p>
 
             <p>
                 Uncheck these two parameters: <br>
-                <img src="../../img/tools/install_uncheck_1.png"> <br>
+                <img src="../../img/tools/install_uncheck_1.png" alt="Uncheck"> <br>
             </p>
 
             <p>
                 Sometimes an error may occur: <br>
-                <img src="../../img/tools/install_error.png"> <br>
+                <img src="../../img/tools/install_error.png" alt="Error"> <br>
                 To fix it, go back to the installer and uncheck these parameters. To see them, you need to
                 click on CUDA dropdown: <br>
-                <img src="../../img/tools/install_if_error_uncheck_2.png"> <br>
+                <img src="../../img/tools/install_if_error_uncheck_2.png" alt="Error"> <br>
                 After that, CUDA should be installed successfully:
-                <img src="../../img/tools/cuda_installed.png"> <br>
+                <img src="../../img/tools/cuda_installed.png" alt="Error"> <br>
             </p>
 
             <p>
-                <font size="6">Adding libraries: </font> <br>
+                <span style="font-size: 2em">Adding libraries: </span> <br>
                 In order for CUDA to work with StarNet++, you need to add the appropriate libraries to the right
                 places. <br>
                 You need to download the <a href="https://developer.nvidia.com/rdp/cudnn-archive"
                                             target="_blank">cuDNN 8.1</a> library. To do this, you need to register
                 an NVIDIA account, if you don't have one yet. <br>
-                <img src="../../img/tools/download_cudnn.png"> <br>
+                <img src="../../img/tools/download_cudnn.png" alt="CUDNN"> <br>
                 As well as <a href="https://storage.googleapis.com/tensorflow/libtensorflow/libtensorflow-gpu-windows-x86_64-2.10.0.zip"
                               target="_blank">tensorflow</a> library, which supports GPU acceleration. <br>
                 Now you need to open the environmental variables so that the system can use CUDA, as well as
                 for an additional flag. <br>
-                <img src="../../img/tools/edit_environ.png"> <br>
+                <img src="../../img/tools/edit_environ.png" alt="Flag"> <br>
                 <br>
-                <img src="../../img/tools/environ.png"> <br>
+                <img src="../../img/tools/environ.png" alt="Variable"> <br>
                 <br>
                 You need to check if CUDA has created its own variables: <br>
-                <img src="../../img/tools/check_cuda_path.png"> <br>
+                <img src="../../img/tools/check_cuda_path.png" alt="CUDA"> <br>
                 <br>
                 You also need to create a separate variable: <br>
-                <img src="../../img/tools/create_env.png"> <br>
+                <img src="../../img/tools/create_env.png" alt="Variable"> <br>
                 <br>
                 <b>TF_FORCE_GPU_ALLOW_GROWTH</b> with a variable value <b>true</b><br>
-                <img src="../../img/tools/new_env.png"> <br>
+                <img src="../../img/tools/new_env.png" alt="Variable"> <br>
                 <br>
                 Be sure to press OK on each step! <br>
-                <img src="../../img/tools/press_ok.png"> <br>
+                <img src="../../img/tools/press_ok.png" alt="Replace"> <br>
                 <br>
                 CUDA is located in <b>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2</b> folder <br>
                 <br>
                 Copy <b>libtensorflow\include\tensorflow</b> folder to <b>CUDA\v11.2\include</b> folder <br>
-                <img src="../../img/tools/tensorflow_to_include.png"> <br>
+                <img src="../../img/tools/tensorflow_to_include.png" alt="Replace"> <br>
                 <br>
                 Copy <b>libtensorflow\lib\tensorflow.lib</b> file to <b>CUDA\v11.2\lib</b> folder <br>
-                <img src="../../img/tools/tens_lib_to_cuda_lib.png"> <br>
+                <img src="../../img/tools/tens_lib_to_cuda_lib.png" alt="Replace"> <br>
                 <br>
                 Copy all files from <b>cudnn\cuda\bin</b> folder to <b>CUDA\v11.2\bin </b>folder <br>
-                <img src="../../img/tools/cudnn_bin_to_cuda_bin.png"> <br>
+                <img src="../../img/tools/cudnn_bin_to_cuda_bin.png" alt="Replace"> <br>
                 <br>
                 Copy all files from <b>cudnn\cuda\include</b> folder to <b>CUDA\v11.2\include </b>folder <br>
-                <img src="../../img/tools/cudnn_include_to_cuda_include.png"> <br>
+                <img src="../../img/tools/cudnn_include_to_cuda_include.png" alt="Replace"> <br>
                 <br>
                 Replace <b>starnet++_cli\tensorflow.dll</b> with <b>libtensorflow\lib\tensorflow.dll</b>
-                <img src="../../img/tools/replace_tensorflow_to_starnet.png"> <br>
+                <img src="../../img/tools/replace_tensorflow_to_starnet.png" alt="Replace"> <br>
                 <br>
                 <b>Restart the computer.</b> <br>
                 <br>
@@ -158,22 +158,18 @@
 
             <p>
                 Has it produced any results? Definitely! <br>
-                <img src="../../img/tools/usage_with_cuda.png"> <br>
+                <img src="../../img/tools/usage_with_cuda.png" alt="Result"> <br>
                 <br>
                 And also faster! <br>
-                <img src="../../img/tools/time_with_cuda.png"> <br>
-
+                <img src="../../img/tools/time_with_cuda.png" alt="Result"> <br>
             </p>
-
-        </font>
-
+        </span>
     </div>
 
-    <hr>
-    <font size="5">
-        Contributors:<br>
-        careless25, Lazulkat
-    </font>
+    <span style="font-size: 1.13em">
+            <hr>
+            Contributors:<br>
+            careless25, Lazulkat
+        </span>
     </body>
-
 </html>

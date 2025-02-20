@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
 	<head>
 		<title> Siril guide </title>
 		<link type="text/css" rel="stylesheet" href="../css/stylesheet.css">
@@ -9,23 +9,23 @@
 	<body style="margin: 0;">
 		<div class="container">
 			<div class="box">
-				<img src="../img/main.jpg" height="100%" width="100%">
+				<img src="../img/main.jpg" height="100%" width="100%" alt="Main">
 			</div>
-			<div class="centered"> <font size="30" > Siril guide </font> </div>
+			<div class="centered"> <span style="font-size:50px;">Siril guide</span> </div>
 		</div>
 		
         <div id="navbar">
 			<a href="../index.html">Getting started</a>
 			<a href="preprocess.html"> Pre-process </a>
 			<div class="dropdown">
-			  <button class="dropbtn">Processing
-				<i class="fa fa-caret-down"></i>
-			  </button>
-			  <div class="dropdown-content">
-				<a class="active" href="galaxy.html">Galaxy</a>
-				<a href="nebula.html">Nebulae</a>
-				<!-- <a href="">Cluster</a> -->
-			  </div>
+			    <button class="dropbtn">Processing
+			        <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+				    <a class="active" href="galaxy.html">Galaxy</a>
+				    <a href="nebula.html">Nebulae</a>
+				    <!-- <a href="">Cluster</a> -->
+                </div>
 			</div> 
 			<a href="tools.html"> Tools </a>
 			<a href="gallery.html"> Gallery </a>
@@ -34,7 +34,7 @@
 
         <div class="sheetTemplate">
 
-		<font size="5">
+        <span style="font-size: 1.5em">
             <br>
 			<i>This guide will use this data:<a class="link_to" href="https://drive.google.com/file/d/1veYt4vV2C12JGLnnQJ74ybvokGloz8h-/view?usp=sharing" target="_blank">M31</a></i>
 			<p> 
@@ -52,22 +52,22 @@
                 recommended to completely repeat the process in these tools; you need to select the parameters yourself.<br>
 
             </p>
-            <p> <font color="red">
+            <p style="color: red;">
                 Please note that this guide shows the possibilities of using various tools,
                 but this does not mean that you should completely copy my processing method. 
                 Experiment, swap tools, repeat BGE or color saturation several times - complete
                 freedom of action. So you will most likely be able to process it better than me ^_^
-            </p> </font>
+            </p>
             <p>
                 First we need to at least see something. Let's enable Autostretch:<br>
-                <img src="../img/galaxy/autostretch.jpg"><br>
+                <img src="../img/galaxy/autostretch.jpg" alt="Autostretch"><br>
                 Quite often you will notice that the entire image is very green or red. 
                 In order to see something, you need unchain channels.<br>
-                <img src="../img/galaxy/unchain.jpg"><br>
+                <img src="../img/galaxy/unchain.jpg" alt="Unchain"><br>
                 Now we need a crop in order to remove stacking artifacts 
                 (they are close to the image borders), and also to make the galaxy better visible.
                 Hold down the left mouse button, draw a rectangle, center it on the galaxy and press the right button. <br>
-                <img src="../img/galaxy/crop.jpg"><br>
+                <img src="../img/galaxy/crop.jpg" alt="Crop"><br>
             </p>
 
             <h2> 🟧(Moderate)-🟥(Hard) Color calibration </h2>
@@ -75,26 +75,26 @@
                 Color calibration allows you to adjust the color of the entire image.
                 This will also correct any green or red color you may have seen in the beginning. <br> 
                 Let's use PCC (Photometric Color Calibration): <br>
-                <img src="../img/galaxy/color_calibr_1.jpg">
-                <img src="../img/galaxy/color_calibr_2.jpg" style="vertical-align: top;"> <br>
+                <img src="../img/galaxy/color_calibr_1.jpg" alt="PCC">
+                <img src="../img/galaxy/color_calibr_2.jpg" style="vertical-align: top;" alt="PCC"> <br>
                 Find your object (if you don't know what it's called, use 
                 <a class="link_to" href="https://google.com" target="_blank">Google</a> or 
                 <a class="link_to" href="https://nova.astrometry.net/upload" target="_blank">Astrometry</a>).
                 Enter the focal length and pixel size (for this object 135mm and 3.7μm).<br>
-                <img src="../img/galaxy/color_calibr_3.jpg"> <br>
+                <img src="../img/galaxy/color_calibr_3.jpg" alt="Equipment parameters"> <br>
                 Wait for the PCC to complete its work:<br>
-                <img src="../img/galaxy/color_calibr_4.jpg"> <br>
+                <img src="../img/galaxy/color_calibr_4.jpg" alt="Completed"> <br>
             </p>
 
             <h2> 🟩(Easy) StarNet++ </h2>
             <p> 
                 Now let`s run Starnet: <br>
-                <img src="../img/galaxy/star_procc_1.jpg"> 
-                <img src="../img/galaxy/star_procc_2.jpg" style="vertical-align: top;"> <br>
+                <img src="../img/galaxy/star_procc_1.jpg" alt="Starnet">
+                <img src="../img/galaxy/star_procc_2.jpg" style="vertical-align: top;" alt="Starnet"> <br>
                 Check the linear image pre-stretch checkbox: <br>
-                <img src="../img/galaxy/star_procc_3.jpg"> <br>
-                <font color="red">It will take some time...</font> <br>
-                <img src="../img/galaxy/star_procc_4.jpg"> <br>
+                <img src="../img/galaxy/star_procc_3.jpg" alt="Prestretch checkbox"> <br>
+                <span style="color: red;">It will take some time...</span><br>
+                <img src="../img/galaxy/star_procc_4.jpg" alt="Completed"> <br>
             </p>
 
             <h2> 🟥(Hard) GHT (Generalized Hyperbolic Transformations) AKA Stretch </h2>
@@ -102,46 +102,46 @@
                 Stretching is the second most important task in all processing.
                 This is where you get all the detail that makes astrophotography so interesting.
                 First we need to do a preliminary stretch to see the object:<br>
-                <img src="../img/galaxy/ght_1.jpg"> <br>
+                <img src="../img/galaxy/ght_1.jpg" alt="First stretch"> <br>
                 Select the logarithmic scale check box and move local stretch intensity slider to the max (15.0):<br>
-                <img src="../img/galaxy/ght_2.jpg"> <br>
+                <img src="../img/galaxy/ght_2.jpg" alt="First stretch"> <br>
                 Now, by changing the Stretch factor you need to shift the peak of the histogram two squares to the right: <br>
-                <img src="../img/galaxy/ght_3.jpg" width="1100px"> <br>
+                <img src="../img/galaxy/ght_3.jpg" width="1100px" alt="First stretch"> <br>
                 This is what it should look like:
-                <img src="../img/galaxy/prestretched_img.jpg" width="1100px"> <br>
+                <img src="../img/galaxy/prestretched_img.jpg" width="1100px" alt="First stretch"> <br>
             </p>
 
             <h2> 🟩(Easy) BGE (BackGround Extraction) </h2>
             <p> 
                 This tool allows you to align and make the background more uniform:<br>
-                <img src="../img/galaxy/BGE.jpg"> <br>
+                <img src="../img/galaxy/BGE.jpg" alt="BGE"> <br>
                 Click Generate to create a grid of samples:<br>
-                <img src="../img/galaxy/BGE_2.jpg"> <br>
-                <img src="../img/galaxy/BGE_3.jpg"> <br>
+                <img src="../img/galaxy/BGE_2.jpg" alt="BGE"> <br>
+                <img src="../img/galaxy/BGE_3.jpg" alt="BGE"> <br>
                 Now, by clicking the left mouse button to create a 
                 sample and the right mouse button to delete it, we need to edit the grid
                 so that the samples only go to the background and not to the object:<br>
-                <img src="../img/galaxy/BGE_4.jpg"> <br>
+                <img src="../img/galaxy/BGE_4.jpg" alt="BGE"> <br>
                 When you have edited the grid, click Compute background and Apply:<br>
-                <img src="../img/galaxy/BGE_5.jpg"> <br>
+                <img src="../img/galaxy/BGE_5.jpg" alt="BGE"> <br>
                 Now the background looks smooth: <br>
-                <img src="../img/galaxy/BGE_6.jpg"><br>
+                <img src="../img/galaxy/BGE_6.jpg" alt="BGE"><br>
             </p>
 
             <h2> 🟩(Easy) Banding reduction </h2>
             <p> 
                 This tool is useful when you notice vertical lines in an image.
                 Take a closer look at the previous image, you will definitely notice them:<br>
-                <img src="../img/galaxy/banding_lines.jpg"><br>
-                Let's get rid of them. <font color="red">Before doing this, be sure to save the image as prestretched.fit 32 bit! 
-                This tool often crashes Siril: </font> <br>
-                <img src="../img/galaxy/banding_reduct_1.jpg"><br>
+                <img src="../img/galaxy/banding_lines.jpg" alt="Banding"><br>
+                Let's get rid of them. <span style="color: red;">Before doing this, be sure to save the image as
+                prestretched.fit 32 bit!This tool often crashes Siril: </span> <br>
+                <img src="../img/galaxy/banding_reduct_1.jpg" alt="Banding"><br>
                 Check protect highlights and, if the lines are not only horizontal,
                 but also vertical (or just vertical) check Vertical banding checkbox too.
                 If after Apply Siril crashes, reduce Ammount:<br>
-                <img src="../img/galaxy/banding_reduct_2.jpg"><br>
+                <img src="../img/galaxy/banding_reduct_2.jpg" alt="Banding"><br>
                 Now the lines are gone:
-                <img src="../img/galaxy/banding_reduct_3.jpg"><br>
+                <img src="../img/galaxy/banding_reduct_3.jpg" alt="Banding"><br>
             </p>
 
             <h2> 🟩(Easy) SCNR(Green noise reduction) </h2>
@@ -150,39 +150,40 @@
                 image definitely has green noise. This is because color cameras typically
                 have twice as many green pixels as red and blue pixels. However, green noise
                 also appears during processing, even if it was not there initially:<br>
-                <img src="../img/galaxy/green_noise_1.jpg">
-                <img src="../img/galaxy/green_noise_2.jpg" style="vertical-align: top;"><br>
+                <img src="../img/galaxy/green_noise_1.jpg" alt="SCNR">
+                <img src="../img/galaxy/green_noise_2.jpg" style="vertical-align: top;" alt="SCNR"><br>
                 No more green:<br>
-                <img src="../img/galaxy/green_noise_3.jpg"><br>
+                <img src="../img/galaxy/green_noise_3.jpg" alt="SCNR"><br>
             </p>
 
             <h3>GHT</h3>
             <p>
-                <a name="black_points">Now let's get back to GHT. Click on the area where the histogram peak is located.</a>
+                <a id="black_points">Now let's get back to GHT. Click on the area where the histogram peak is located.</a>
                 Afterwards, move the Highlight protection slider so that it is identical to the
                 Symmetry point slider. Also set local stretch intensity to max:<br>
-                <img src="../img/galaxy/ght_black_points_1.jpg"><br>
+                <img src="../img/galaxy/ght_black_points_1.jpg" alt="GHT"><br>
                 Now, changing the linear stretch, shift the histogram to the left until there is a small gap left:<br>
-                <img src="../img/galaxy/ght_black_points_2.jpg" width="1100px"><br>
+                <img src="../img/galaxy/ght_black_points_2.jpg" width="1100px" alt="GHT"><br>
                 As you can see, this makes the background darker while maintaining the galaxy.<br>
                 <br>
                 Now let's repeat the Stretch as we did in the beginning to get more details. 
                 This is an important and difficult step: you must get as much detail as possible, 
                 but you must not overexpose the galaxy, especially the core. If you see that the core 
                 is too bright, move the local stretch intensity slider to the right until the core becomes less bright:<br>
-                <img src="../img/galaxy/next_ght_stretch.jpg" width="1100px"><br>
-                And now let's make the background darker again using the <a href="#black_points" class="link_to">previous</a> technique: <br>
-                <img src="../img/galaxy/next_black_points.jpg" width="1100px"><br>
+                <img src="../img/galaxy/next_ght_stretch.jpg" width="1100px" alt="GHT"><br>
+                And now let's make the background darker again using the <a href="#black_points"
+                                                                            class="link_to">previous</a> technique: <br>
+                <img src="../img/galaxy/next_black_points.jpg" width="1100px" alt="GHT"><br>
             </p>
 
             <h2> 🟧(Moderate) CLAHE(Contrast-Limited Adaptive Histogram Equalisation) </h2>
             <p>   
                 This tool allows you to get even more detail: <br> 
-                <img src="../img/galaxy/contrast_limited_1.jpg" ><br>
+                <img src="../img/galaxy/contrast_limited_1.jpg"  alt="CLAHE"><br>
                 If you overdo it, the background will become noisy too.
                 Adjust the tiles grid size until you get more detail without
                 artifacts or looking too unnatural:<br>
-                <img src="../img/galaxy/contrast_limited_2.jpg" width="1100px"><br>
+                <img src="../img/galaxy/contrast_limited_2.jpg" width="1100px" alt="CLAHE"><br>
             </p>
 
             <h2> 🟩(Easy) Noise reduction </h2>
@@ -193,39 +194,39 @@
                 32 bit (if graxpert gives an error when denoising, change to 16 bits).<br>
 
                 Load image:<br>
-                <img src="../img/galaxy/graxpert_load.png" ><br>
+                <img src="../img/galaxy/graxpert_load.png"  alt="GraXpert"><br>
                 In tab 4 you can configure denoise. Since the program executes the 
                 primary process regardless of the selected parameter, you can leave it as is:<br>
-                <img src="../img/galaxy/graxpert_denoise.png"><br>
+                <img src="../img/galaxy/graxpert_denoise.png" alt="GraXpert"><br>
                 When the program finishes, you will see Denoised at the top. Now, by swapping 
                 two images, you can compare and change the Denoise strength to achieve an even,
-                 almost smooth image (after the first iteration, the denoise process occurs almost instantly):
-                 <img src="../img/galaxy/graxpert_compare.png" width="1100px"><br>
+                almost smooth image (after the first iteration, the denoise process occurs almost instantly):
+                <img src="../img/galaxy/graxpert_compare.png" width="1100px" alt="GraXpert"><br>
                 Once you get the result, save the image:<br>
-                <img src="../img/galaxy/graxpert_save.png" ><br>   
+                <img src="../img/galaxy/graxpert_save.png"  alt="GraXpert"><br>   
             </p>
 
             <h3>GHT</h3>
             <p>
                 After denoise the background became brighter. Let's fix this:<br>
-                <img src="../img/galaxy/make_bg_darker_after_denoise.jpg" width="1100px"><br>  
+                <img src="../img/galaxy/make_bg_darker_after_denoise.jpg" width="1100px" alt="GHT"><br>  
             </p>
 
             <h2> 🟧(Moderate) Wavelets(sharpness) </h2>
             <p>     
                 Another tool that will increase the detail of the object. <br>
-                <img src="../img/galaxy/wavelets_1.jpg" ><br>
+                <img src="../img/galaxy/wavelets_1.jpg"  alt="Wavelets"><br>
                 Press Execute:<br>
-                <img src="../img/galaxy/wavelets_2.jpg" ><br>
+                <img src="../img/galaxy/wavelets_2.jpg"  alt="Wavelets"><br>
                 It will also easily increase the noise if you overdo it. Each
                 subsequent slider affects more significant details. This means 
                 that the first slider affects extremely fine detail, and, for example,
                 the second and third affect the dust ring. Select the parameters so that
                 the final image does not look too synthetic and does not change the color
                 too much (wavelets generate green noise):<br>
-                <img src="../img/galaxy/wavelets_2_2.jpg" ><br>
+                <img src="../img/galaxy/wavelets_2_2.jpg"  alt="Wavelets"><br>
                 <br>
-                <img src="../img/galaxy/wavelets_3.jpg" ><br>   
+                <img src="../img/galaxy/wavelets_3.jpg"  alt="Wavelets"><br>   
             </p>
 
             <h2> 🟧(Moderate) Asinh Transformation </h2>
@@ -233,10 +234,10 @@
                 This tool allows you to quickly change the brightness
                 of the entire image and how dark your background will be.
                 This can be done using GHT, but Asinh can be used for small adjustments:<br>
-                <img src="../img/galaxy/asinh_1.jpg" ><br>  
+                <img src="../img/galaxy/asinh_1.jpg"  alt="Asinh"><br>  
                 By increasing the number of black points you can make the background 
                 darker, but do not overdo it, the background should not be completely black:<br>
-                <img src="../img/galaxy/asinh_2.jpg" width="1100px" ><br>  
+                <img src="../img/galaxy/asinh_2.jpg" width="1100px"  alt="Asinh"><br>  
             </p>
 
             <h2> 🟥(Hard) Masking </h2>
@@ -249,109 +250,109 @@
                 has), so this process is done manually and is quite complicated.<br>
                 <br>
                 <a name="split_rgb">First you need to extract color channels from the image in order to work with them further:</a>
-                <img src="../img/galaxy/extract_RGB_1.jpg">
-                <img src="../img/galaxy/extract_RGB_2.jpg" style="vertical-align: top;"><br> 
+                <img src="../img/galaxy/extract_RGB_1.jpg" alt="Masking">
+                <img src="../img/galaxy/extract_RGB_2.jpg" style="vertical-align: top;" alt="Masking"><br> 
                 For ease of understanding, call channels by their proper names:<br>
-                <img src="../img/galaxy/extract_RGB_3.jpg"> <br>
+                <img src="../img/galaxy/extract_RGB_3.jpg" alt="Masking"> <br>
                 Now let's open the blue channel:<br>
-                <img src="../img/galaxy/open_B_channel.jpg"><br>
+                <img src="../img/galaxy/open_B_channel.jpg" alt="Masking"><br>
                 Then we use GHT to select the object. To do this, select linear stretch:<br>
-                <img src="../img/galaxy/linear_stretch_1.jpg"><br>
+                <img src="../img/galaxy/linear_stretch_1.jpg" alt=""><br>
                 Now, by moving the slider, we need to get rid of the background, 
                 otherwise it will spoil the image, but at the same time we need to
                 preserve the outline of the galaxy:<br>
-                <img src="../img/galaxy/linear_stretch_2.jpg" width="1100px"><br>
+                <img src="../img/galaxy/linear_stretch_2.jpg" width="1100px" alt="Masking"><br>
                 And then you can make the background even darker using Asinh,
                 if after GHT you notice that the background is not black enough:<br>
-                <img src="../img/galaxy/asih_after_linear.jpg"><br>
+                <img src="../img/galaxy/asih_after_linear.jpg" alt="Masking"><br>
                 However, the problem is that the background is still not
                 black, and this is important for masks. To see the background,
                 look under the image monitor in Siril. You will notice two sliders. 
                 Move the top slider to the left until you see white dots:<br>
-                <img src="../img/galaxy/how_to_see_background.jpg"><br>
+                <img src="../img/galaxy/how_to_see_background.jpg" alt="Masking"><br>
                 To remove them, you can use the built-in filling function in Siril, or using GIMP:<br>
-                <img src="../img/galaxy/img_before_gimp.jpg"><br>
+                <img src="../img/galaxy/img_before_gimp.jpg" alt="Masking"><br>
                 With Siril you can remove them, but this is difficult since 
                 you fill the image using rectangles that you draw by holding down the left mouse button:<br>
-                <img src="../img/galaxy/how_to_remove_artifacts_using_console.jpg"><br>
+                <img src="../img/galaxy/how_to_remove_artifacts_using_console.jpg" alt="Masking"><br>
                 Then write the command <i>fill 0</i> to the console:<br>
-                <img src="../img/galaxy/how_to_remove_artifacts_using_console_2.jpg"><br>
+                <img src="../img/galaxy/how_to_remove_artifacts_using_console_2.jpg" alt="Masking"><br>
                 Now the entire rectangle is completely black. This way, by moving it
                 and drawing new ones, you can change the background to black, but
                 there will be hard borders at the corners. Therefore, this method 
                 is not entirely ideal:<br>
-                <img src="../img/galaxy/how_to_remove_artifacts_using_console_3.jpg"><br>
+                <img src="../img/galaxy/how_to_remove_artifacts_using_console_3.jpg" alt="Masking"><br>
                 The best way is to remove the background using GIMP.
                 Open the image in GIMP, be sure to click Keep:<br>
-                <img src="../img/galaxy/gimp_2.jpg"><br>
+                <img src="../img/galaxy/gimp_2.jpg" alt="Masking"><br>
                 After that, find paintbrush:<br>
-                <img src="../img/galaxy/gimp_2.2.jpg"><br>
+                <img src="../img/galaxy/gimp_2.2.jpg" alt="Masking"><br>
                 Now configure the settings as shown:<br>
-                <img src="../img/galaxy/gimp_2.3.jpg"><br>
+                <img src="../img/galaxy/gimp_2.3.jpg" alt="Masking"><br>
                 Walk over the entire background without hitting the object.<br>
                 <br>
                 Then save it as B-mask.tif:<br>
-                <img src="../img/galaxy/gimp_5.jpg" width="750px">
-                <img src="../img/galaxy/gimp_6.jpg" style="vertical-align: top;"><br>
+                <img src="../img/galaxy/gimp_5.jpg" width="750px" alt="Masking">
+                <img src="../img/galaxy/gimp_6.jpg" style="vertical-align: top;" alt="Masking"><br>
                 This is what you should get:<br>
-                <img src="../img/galaxy/img_after_gimp.jpg"><br>
+                <img src="../img/galaxy/img_after_gimp.jpg" alt="Masking"><br>
                 Now let's open B.fit again, but this time we'll highlight the brightest part - the core.
                 Since there are a lot of black points, there is no point in cleaning the background in GIMP:<br>
-                <img src="../img/galaxy/core_ght.jpg" width="1100px"><br>
+                <img src="../img/galaxy/core_ght.jpg" width="1100px" alt="Masking"><br>
                 Now we do the same with the red channel:<br>
-                <img src="../img/galaxy/red_mask_ght.jpg" width="1100px"><br>
+                <img src="../img/galaxy/red_mask_ght.jpg" width="1100px" alt="Masking"><br>
                 And the core:<br>
-                <img src="../img/galaxy/red_core_ght.jpg"><br>
+                <img src="../img/galaxy/red_core_ght.jpg" alt="Masking"><br>
                 <h3>Pixelmath</h3>
-                Pixelmath is a tool for combining layers. With it we can apply the masks we made:<br>
-                <img src="../img/galaxy/pixelmath_1.jpg"><br>
+                Pixelmath is a tool for combining layers. With it, we can apply the masks we made:<br>
+                <img src="../img/galaxy/pixelmath_1.jpg" alt="Masking"><br>
                 Uncheck Use single RGB/K... and press plus sign:<br>
-                <img src="../img/galaxy/pixelmath_2.jpg"><br>
+                <img src="../img/galaxy/pixelmath_2.jpg" alt="Masking"><br>
                 Select all files (R,G,B, masks and cores) by holding Shift and clicking the left mouse button:<br>
-                <img src="../img/galaxy/pixelmath_3.jpg"><br>
+                <img src="../img/galaxy/pixelmath_3.jpg" alt="Masking"><br>
                 Now we see our files as variables:<br>
-                <img src="../img/galaxy/pixelmath_4.jpg"><br>
-                Change them according to the content of the image by double clicking on it:<br>
-                <img src="../img/galaxy/pixelmath_5.jpg"><br>
+                <img src="../img/galaxy/pixelmath_4.jpg" alt="Masking"><br>
+                Change them according to the content of the image by double-clicking on it:<br>
+                <img src="../img/galaxy/pixelmath_5.jpg" alt="Masking"><br>
                 Now enter the appropriate layers in the lines and click Apply to see the initial image:<br>
-                <img src="../img/galaxy/pixelmath_6.jpg" width="1100px"><br>
+                <img src="../img/galaxy/pixelmath_6.jpg" width="1100px" alt="Masking"><br>
                 Now, we need to add the corresponding masks to the corresponding colors.
                 From the masks we subtract the cores so that they do not overexpose
                 the already bright core. By selecting the brightness of these masks
-                we achieve a good color.<font color="red"> Everything here is very individual and you
-                need to experiment.</font> For example, to highlight the details of one mask,
+                we achieve a good color.<span style="color: red;"> Everything here is very individual, and you
+                need to experiment.</span> For example, to highlight the details of one mask,
                 you can subtract the brighter red mask from the blue one:<br>
-                <img src="../img/galaxy/pixelmath_7.jpg" width="1100px"><br>
+                <img src="../img/galaxy/pixelmath_7.jpg" width="1100px" alt="Masking"><br>
             </p>
 
             <h2> 🟧(Moderate) Color saturation </h2>
             <p>        
                 After adding masks the image is still quite pale, let's fix that with this tool:<br>
-                <img src="../img/galaxy/color_saturation_1.jpg"><br>
+                <img src="../img/galaxy/color_saturation_1.jpg" alt="Saturation"><br>
                 Here you can select either a separate color that you want to enhance, or all at once.
-                The lower the Background factor, the more the duller details are colored, right down
+                The lower the Background factor, the more, the duller details are colored, right down
                 to the background itself:<br>
-                <img src="../img/galaxy/color_saturation_2.jpg" width="1100px"><br>
+                <img src="../img/galaxy/color_saturation_2.jpg" width="1100px" alt="Saturation"><br>
             </p>
 
             <p>
-                <font color="dark-orange">(Optional)</font>Let's repeat SCNR:<br>
-                <img src="../img/galaxy/another_green_noise.jpg"><br>
+                <span style="color: darkorange;">(Optional)</span> Let's repeat SCNR:<br>
+                <img src="../img/galaxy/another_green_noise.jpg" alt="Saturation"><br>
                 <h3> Background Neutralization </h3>
                 This is a tool similar to PCC, but it works differently:
                 we select the area that we consider to be the background 
-                and this tool will even out the color. <font color="red">I noticed a phenomenon 
+                and this tool will even out the color. <span style="color: red;">I noticed a phenomenon 
                 that if you first do color calibration using background 
                 neutralization instead of PCC, the colors come out better, but 
-                this is purely my observation:</font><br>
-                <img src="../img/galaxy/color_calibr_2.1.jpg"><br>
+                this is purely my observation:</span><br>
+                <img src="../img/galaxy/color_calibr_2.1.jpg" alt="Saturation"><br>
                 Select the background, click Use current selection and Background neutralization:<br>
-                <img src="../img/galaxy/color_calibr_2.2.jpg" width="1100px"><br>
+                <img src="../img/galaxy/color_calibr_2.2.jpg" width="1100px" alt="Saturation"><br>
                 Sometimes green noise may appear:<br>
-                <img src="../img/galaxy/color_calibr_2.3.jpg"><br>
-           </p>
-
-           <h2> 🟧(Moderate) Color mottle </h2>
+                <img src="../img/galaxy/color_calibr_2.3.jpg" alt="Saturation"><br>
+            </p>
+            
+            <h2> 🟧(Moderate) Color mottle </h2>
             <p>        
                 Color mottle is when the background is painted in all different colors.
                 To get rid of this, split the channels as shown <a href="#split_rgb" class="link_to">earlier</a> and apply PixelMath.
@@ -365,28 +366,28 @@
                 <i>iif(B < LOW_LIMIT,  iif(B>R && R >=G, R, iif(B>G && G>=R, G, B)), B)</i> <br>
                 <br>
                 Instead of LOW_LIMIT, substitute values ​​that will make the background better, but will not affect the object:<br>
-                <img src="../img/galaxy/color_mottle.jpg" width="1100px"><br>
+                <img src="../img/galaxy/color_mottle.jpg" width="1100px" alt="Mottle"><br>
             </p>
-
+            
             <p>
-                <font color="dark-orange">(Optional)</font>Let's repeat SCNR:<br>
-                <img src="../img/galaxy/another_green_noise.jpg"><br>
-           </p>
-
-           <h2> 🟧(Moderate) Curves </h2>
+                <span style="color: darkorange;">(Optional)</span> Let's repeat SCNR:<br>
+                <img src="../img/galaxy/another_green_noise.jpg" alt="SCNR"><br>
+            </p>
+            
+            <h2> 🟧(Moderate) Curves </h2>
             <p>        
                 <b>I made a little mistake applying curves to the image with stars, so forget about them and consider it a starless image ^_^</b><br>
                 <br>
                 Using curves in GIMP we can get even more color:<br>
-                <img src="../img/galaxy/curves.jpg"><br>
+                <img src="../img/galaxy/curves.jpg" alt="Curves"><br>
                 Can be edited for each channel separately. 
                 We are interested in red and blue (although no one
                 forbids you to experiment, which is important):<br>
-                <img src="../img/galaxy/blue_curve.jpg"><br>
+                <img src="../img/galaxy/blue_curve.jpg" alt="Curves"><br>
                 <br>
-                <img src="../img/galaxy/red_curve.jpg"><br>
+                <img src="../img/galaxy/red_curve.jpg" alt="Curves"><br>
                 The green noise came out a little:<br>
-                <img src="../img/galaxy/super_final_green_noise.jpg"><br>
+                <img src="../img/galaxy/super_final_green_noise.jpg" alt="Curves"><br>
                 Save as starless.tif and then using Siril convert to starless.fit (open .tif in Siril and Save as .FIT 32 bit).
             </p>
 
@@ -394,49 +395,53 @@
             <p>   
                 Now let's process the stars. Open starmask and move the
                 top slider to the left side so that the stars are visible:<br>   
-                <img src="../img/galaxy/starmask_1.jpg"><br> 
+                <img src="../img/galaxy/starmask_1.jpg" alt="Starmask"><br> 
                 SCNR:<br>
-                <img src="../img/galaxy/starmask_2.jpg" width="1100px"><br> 
+                <img src="../img/galaxy/starmask_2.jpg" width="1100px" alt="Starmask"><br> 
                 Let's add saturation to the stars, the background factor can be reduced to zero:<br>
-                <img src="../img/galaxy/starmask_3.jpg" width="1100px"><br> 
+                <img src="../img/galaxy/starmask_3.jpg" width="1100px" alt="Starmask"><br> 
                 Let’s also reduce their orangeness and yellowness a little:<br>
-                <img src="../img/galaxy/starmask_4.jpg" width="1100px"><br> 
+                <img src="../img/galaxy/starmask_4.jpg" width="1100px" alt="Starmask"><br> 
                 Now stretch. Select Human weighted luminance to make the color more saturated:<br>
-                <img src="../img/galaxy/starmask_5.jpg" ><br> 
+                <img src="../img/galaxy/starmask_5.jpg"  alt="Starmask"><br> 
                 By changing the first and second sliders achieve the optimal number of stars:<br>
-                <img src="../img/galaxy/starmask_6.jpg" width="1100px"><br>
+                <img src="../img/galaxy/starmask_6.jpg" width="1100px" alt="Starmask"><br>
                 Save as starmask.fit 32 bit.
                 <h3> Star recomposition</h3>
                 <h5>There is a newer and more effective method, which is described in the
                 <a href="nebula.html#better_stars" target="_blank">Nebulae section</a></h5>
                 Now let's return the stars:<br>
-                <img src="../img/galaxy/star_recomp_1.jpg"><br> 
+                <img src="../img/galaxy/star_recomp_1.jpg" alt="Starmask"><br> 
                 On the top left select starless.fit, on the top right select starmask.fit
                 By increasing the stretch factor the stars will become brighter. By decreasing
                 the symmetry point the total number of stars will decrease:<br>
-                <img src="../img/galaxy/star_recomp_2.jpg"><br>  
+                <img src="../img/galaxy/star_recomp_2.jpg" alt="Starmask"><br>  
                 Here's what we get:<br>
-                <img src="../img/galaxy/non_rotated.jpg"><br>  
+                <img src="../img/galaxy/non_rotated.jpg" alt="Starmask"><br>  
                 Using the panel on the bottom right you can rotate an object:<br>
-                <img src="../img/galaxy/use_this_for_rotation_and_changing_position.jpg">
+                <img src="../img/galaxy/use_this_for_rotation_and_changing_position.jpg" alt="Starmask">
                 <br>
-                <img src="../img/galaxy/rotated.jpg"><br> 
+                <img src="../img/galaxy/rotated.jpg" alt="Starmask"><br> 
             </p>
 
             <p>
                 And that's the end!<br>
-                <img src="../img/galaxy/absolute_final_result.jpg"><br> 
+                <img src="../img/galaxy/absolute_final_result.jpg" alt="End"><br> 
                 <br>
                 <br>
                 This guide is not perfect; you will see better processing in the <a href="gallery.html" class="link_to">Gallery</a> section,
-                where videos on my and other image processing will be shown. <font color="red"> <br>
+                where videos on my and other image processing will be shown. <span style="color: red;"> <br>
                 If you notice a bug, error or have ideas on how to improve this guide,
-                <b>PLEASE</b> let me know on Discord: quark_coder(Quark#7359) </font>
-            </p> 
+                <b>PLEASE</b> let me know on Discord: quark_coder(Quark#7359) </span>
+            </p>
+
+        </span>
 		</div>
 
-        <hr>
-        Contributors:<br>
-        careless25, Lazulkat
+        <span style="font-size: 1.13em">
+            <hr>
+            Contributors:<br>
+            careless25, Lazulkat
+        </span>
 	</body>
 </html>
