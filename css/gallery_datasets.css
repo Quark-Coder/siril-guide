@@ -23,7 +23,7 @@
 .info-container {
     display: flex;
     flex-direction: column;
-    width: 920px; 
+    width: 920px;
 }
 .info-description-container {
     display: flex;
@@ -44,7 +44,7 @@
     margin-top: 0;
     position: absolute;
     top: 743px;
-    left: 555px; 
+    left: 555px;
 }
 
 .info-links img {
@@ -59,4 +59,63 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
+}
+
+.dropdown-variants {
+    position: absolute;
+    top: 247px;
+    z-index: 1000;
+}
+
+.dropbtn-variants {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dropdown-content-variants {
+    display: none;
+    position: absolute;
+    background-color: #dddddd;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.dropdown-variants:hover .dropdown-content-variants {
+    display: block;
+}
+
+.variant-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.variant-author {
+    font-weight: bold;
+}
+
+.variant-item:hover {
+    background-color: #b3b3b3;
+    font-weight: bold;
+}
+
+.variant-item.selected {
+    background-color: #1fbaff;
+    font-weight: bold;
+}
+
+.variant-icons img {
+    height:25px;
+    margin-left: 5px;
+}
+
+.variant-item:last-child {
+    border-bottom: none;
 }
