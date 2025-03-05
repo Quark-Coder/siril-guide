@@ -27,7 +27,36 @@
           "../../img/gallery/graxpert_logo.png",
           "../../img/gallery/gimp_logo.png"
         ]
+      },
+
+      {
+        "author": "@Quark",
+        "comparison": {
+          "baseImage": "../../img/gallery/NGC6618_prestretched_low_res.png",
+          "overlayImage": "../../img/gallery/NGC6618_v2_low_res.png"
+        },
+        "info": {
+          "dataAuthor": "@siryessirnz",
+          "focalLength": "700mm",
+          "camera": "ZWO ASI533mc Pro (3.76 µm)",
+          "telescope": "Askar 103 APO lens",
+          "mount": "iOptron CEM26",
+          "filter": "Optolong L-Extreme",
+          "totalIntegrationTime": "~14 hours"
+        },
+        "videoUrl": "https://youtube.com/embed/AYnxYVNxfpw",
+        "links": {
+          "download": "https://drive.google.com/file/d/1HrcXrK-Izk87Sqo042PL7kMw7qNRoPGV/view?usp=sharing",
+          "info": "https://en.wikipedia.org/wiki/Omega_Nebula"
+        },
+        "software": [
+          "../../img/gallery/siril_logo.png",
+          "../../img/gallery/graxpert_logo.png",
+          "../../img/gallery/photoshop_logo.png"
+        ]
       }
+
+
     ]
   },
 
