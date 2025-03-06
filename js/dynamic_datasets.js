@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const common = dataset.common || {};
             const variants = dataset.variants.map(variant => {
                 return {
-                    // Берём автора непосредственно из варианта (если его нет, можно опционально добавить fallback)
                     author: variant.author || "",
                     info: { ...common.info, ...variant.info },
                     comparison: { ...common.comparison, ...variant.comparison },
