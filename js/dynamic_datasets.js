@@ -86,6 +86,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 const item = document.createElement("div");
                 item.className = "variant-item";
+                // Если индекс выбранного варианта совпадает с текущим, добавляем класс selected
+                if (index === variantIndex) {
+                    item.classList.add("selected");
+                }
 
                 const authorSpan = document.createElement("span");
                 authorSpan.className = "variant-author";
@@ -106,6 +110,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 itemLink.appendChild(item);
                 variantsList.appendChild(itemLink);
+            });
+
+            // Добавляем обработчик клика для динамического применения класса "selected"
+            const variantItems = document.querySelectorAll('.variant-item');
+            variantItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    // Если не требуется немедленный переход по ссылке, можно отменить его:
+                    // e.preventDefault();
+
+                    // Удаляем класс selected у всех элементов
+                    variantItems.forEach(i => i.classList.remove('selected'));
+                    // Добавляем класс selected к нажатому элементу
+                    this.classList.add('selected');
+                });
             });
         })
         .catch(error => console.error("Data upload error:", error));
