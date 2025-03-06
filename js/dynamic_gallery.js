@@ -12,8 +12,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (data.hasOwnProperty(id)) {
                     const dataset = data[id];
                     const variant = dataset.variants[0];
-                    const imageSrc = (variant.comparison && variant.comparison.overlayImage) ||
-                        (dataset.common && dataset.common.comparison && dataset.common.comparison.baseImage) ||
+                    const imageSrc =
+                        (variant.comparison?.overlayImage?.replace(/^\.\.\//, '') ?? '') ||
+                        (dataset.common?.comparison?.baseImage?.replace(/^\.\.\//, '') ?? '') ||
                         "";
 
                     const a = document.createElement('a');
