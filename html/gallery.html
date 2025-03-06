@@ -1,65 +1,46 @@
 <html lang="en">
-	<head>
-		<title> Siril guide </title>
-		<link type="text/css" rel="stylesheet" href="../css/stylesheet.css">
-		<script type="text/javascript" src="../js/sticky_navpan.js"></script>	
-	</head>
-	
-	<body style="margin: 0;">
-		<div class="container">
-			<div class="box">
-				<img src="../img/main.jpg" height="100%" width="100%">
-			</div>
-			<div class="centered"> <span style="font-size:50px;">Siril guide</span> </div>
+<head>
+	<title>Siril guide</title>
+	<link type="text/css" rel="stylesheet" href="../css/stylesheet.css">
+	<script type="text/javascript" src="../js/sticky_navpan.js"></script>
+	<script type="text/javascript" src="../js/dynamic_gallery.js"></script>
+</head>
+<body style="margin: 0;">
+<div class="container">
+	<div class="box">
+		<img src="../img/main.jpg" height="100%" width="100%">
+	</div>
+	<div class="centered">
+		<span style="font-size:50px;">Siril guide</span>
+	</div>
+</div>
+
+<div id="navbar">
+	<a href="../index.html">Getting started</a>
+	<a href="preprocess.html">Pre-process</a>
+	<div class="dropdown">
+		<button class="dropbtn">Processing
+			<i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+			<a href="galaxy.html">Galaxy</a>
+			<a href="nebula.html">Nebulae</a>
 		</div>
-		
-		<div id="navbar">
-			<a href="../index.html">Getting started</a>
-			<a href="preprocess.html"> Pre-process </a>
-			<div class="dropdown">
-				<button class="dropbtn">Processing
-					<i class="fa fa-caret-down"></i>
-				</button>
-				<div class="dropdown-content">
-					<a href="galaxy.html">Galaxy</a>
-					<a href="nebula.html">Nebulae</a>
-					<!-- <a href="">Cluster</a> -->
-				</div>
-			</div> 
-			<a href="tools.html"> Tools </a>
-			<a class="active" href="gallery.html"> Gallery </a>
-			<a href="about.html"> About </a>
-		</div>
+	</div>
+	<a href="tools.html">Tools</a>
+	<a class="active" href="gallery.html">Gallery</a>
+	<a href="about.html">About</a>
+</div>
 
-		<br>
-		<div class="gallery">
-			<a href="gallery_datasets/gallery_datasets.html?id=NGC6618&variant=0" class="gallery-item">
-				<div class="item-text">
-					<span>NGC 6618</span>
-				</div>
-				<img src="../img/gallery/NGC6618_v2_low_res.png" alt="NGC 6618">
-			</a>
+<br>
+<div class="gallery" id="galleryContainer"></div>
 
-			<a href="gallery_datasets/gallery_datasets.html?id=NGC6523&variant=0" class="gallery-item">
-				<div class="item-text">
-					<span>NGC 6523</span>
-				</div>
-				<img src="../img/gallery/NGC6523_low_res.png" alt="NGC 6523">
-			</a>
+<span style="font-size: 1.13em">
+    <hr>
+    Contributors:<br>
+    careless25, Lazulkat
+  </span>
 
-			<a href="gallery_datasets/gallery_datasets.html?id=NGC6995&variant=0" class="gallery-item">
-				<div class="item-text">
-					<span>NGC 6995</span>
-				</div>
-				<img src="../img/gallery/NGC6995_low_res.png" alt="NGC 6995">
-			</a>
-	    </div>
 
-		<span style="font-size: 1.13em">
-            <hr>
-            Contributors:<br>
-            careless25, Lazulkat
-        </span>
-	</body>
-	
+</body>
 </html>
