@@ -1,88 +1,78 @@
 {
   "NGC6618": {
     "title": "NGC 6618",
+    "common": {
+      "comparison": {
+        "baseImage": "../../img/gallery/NGC6618_prestretched_low_res.png"
+      },
+      "info": {
+        "dataAuthor": "@siryessirnz",
+        "focalLength": "700mm",
+        "camera": "ZWO ASI533mc Pro (3.76 µm)",
+        "telescope": "Askar 103 APO lens",
+        "mount": "iOptron CEM26",
+        "filter": "Optolong L-Extreme",
+        "totalIntegrationTime": "~14 hours"
+      },
+      "links": {
+        "download": "https://drive.google.com/file/d/1HrcXrK-Izk87Sqo042PL7kMw7qNRoPGV/view?usp=sharing",
+        "info": "https://en.wikipedia.org/wiki/Omega_Nebula"
+      }
+    },
     "variants": [
       {
         "author": "@Quark",
         "comparison": {
-          "baseImage": "../../img/gallery/NGC6618_prestretched_low_res.png",
           "overlayImage": "../../img/gallery/NGC6618_low_res.png"
         },
-        "info": {
-          "dataAuthor": "@siryessirnz",
-          "focalLength": "700mm",
-          "camera": "ZWO ASI533mc Pro (3.76 µm)",
-          "telescope": "Askar 103 APO lens",
-          "mount": "iOptron CEM26",
-          "filter": "Optolong L-Extreme",
-          "totalIntegrationTime": "~14 hours"
-        },
         "videoUrl": "https://www.youtube.com/embed/Ow10jJMwtz8",
-        "links": {
-          "download": "https://drive.google.com/file/d/1HrcXrK-Izk87Sqo042PL7kMw7qNRoPGV/view?usp=sharing",
-          "info": "https://en.wikipedia.org/wiki/Omega_Nebula"
-        },
         "software": [
           "../../img/gallery/siril_logo.png",
           "../../img/gallery/graxpert_logo.png",
           "../../img/gallery/gimp_logo.png"
         ]
       },
-
       {
         "author": "@Quark",
         "comparison": {
-          "baseImage": "../../img/gallery/NGC6618_prestretched_low_res.png",
           "overlayImage": "../../img/gallery/NGC6618_v2_low_res.png"
         },
-        "info": {
-          "dataAuthor": "@siryessirnz",
-          "focalLength": "700mm",
-          "camera": "ZWO ASI533mc Pro (3.76 µm)",
-          "telescope": "Askar 103 APO lens",
-          "mount": "iOptron CEM26",
-          "filter": "Optolong L-Extreme",
-          "totalIntegrationTime": "~14 hours"
-        },
         "videoUrl": "https://youtube.com/embed/AYnxYVNxfpw",
-        "links": {
-          "download": "https://drive.google.com/file/d/1HrcXrK-Izk87Sqo042PL7kMw7qNRoPGV/view?usp=sharing",
-          "info": "https://en.wikipedia.org/wiki/Omega_Nebula"
-        },
         "software": [
           "../../img/gallery/siril_logo.png",
           "../../img/gallery/graxpert_logo.png",
           "../../img/gallery/photoshop_logo.png"
         ]
       }
-
-
     ]
   },
-
   "NGC6523": {
     "title": "NGC 6523",
+    "common": {
+      "comparison": {
+        "baseImage": "../../img/gallery/NGC6523_prestretched_low_res.png"
+      },
+      "info": {
+        "dataAuthor": "@siryessirnz",
+        "focalLength": "250mm",
+        "camera": "ZWO ASI533mc Pro (3.76 µm)",
+        "telescope": "Redcat 51",
+        "mount": "iOptron CEM26",
+        "filter": "Optolong L-Extreme",
+        "totalIntegrationTime": "~8.4 hours"
+      },
+      "links": {
+        "download": "https://drive.google.com/file/d/1Bp9vWQi63xWIYmKF7mvGxUP4DjHA4udq/view?usp=drive_link",
+        "info": "https://en.wikipedia.org/wiki/Lagoon_Nebula"
+      }
+    },
     "variants": [
       {
         "author": "@Quark",
         "comparison": {
-          "baseImage": "../../img/gallery/NGC6523_prestretched_low_res.png",
           "overlayImage": "../../img/gallery/NGC6523_low_res.png"
         },
-        "info": {
-          "dataAuthor": "@siryessirnz",
-          "focalLength": "250mm",
-          "camera": "ZWO ASI533mc Pro (3.76 µm)",
-          "telescope": "Redcat 51",
-          "mount": "iOptron CEM26",
-          "filter": "Optolong L-Extreme",
-          "totalIntegrationTime": "~8.4 hours"
-        },
         "videoUrl": "https://www.youtube.com/embed/e59zAev2WJU",
-        "links": {
-          "download": "https://drive.google.com/file/d/1Bp9vWQi63xWIYmKF7mvGxUP4DjHA4udq/view?usp=drive_link",
-          "info": "https://en.wikipedia.org/wiki/Lagoon_Nebula"
-        },
         "software": [
           "../../img/gallery/siril_logo.png",
           "../../img/gallery/graxpert_logo.png",
@@ -91,30 +81,33 @@
       }
     ]
   },
-
   "NGC6995": {
     "title": "NGC 6995",
+    "common": {
+      "comparison": {
+        "baseImage": "../../img/gallery/NGC6995_prestretched_low_res.png"
+      },
+      "info": {
+        "dataAuthor": "@KaidenBainAstro(rockingflyer756)",
+        "focalLength": "714mm",
+        "camera": "??? (4.63µm)",
+        "telescope": "???",
+        "mount": "???",
+        "filter": "???",
+        "totalIntegrationTime": "30 hours"
+      },
+      "links": {
+        "download": "https://drive.google.com/file/d/1f0eMOpRaL1a9uNZMfhnGrBhSmqklVHY5/view?usp=drive_link",
+        "info": "https://en.wikipedia.org/wiki/Veil_Nebula"
+      }
+    },
     "variants": [
       {
         "author": "@Quark",
         "comparison": {
-          "baseImage": "../../img/gallery/NGC6995_prestretched_low_res.png",
           "overlayImage": "../../img/gallery/NGC6995_low_res.png"
         },
-        "info": {
-          "dataAuthor": "@KaidenBainAstro(rockingflyer756)",
-          "focalLength": "714mm",
-          "camera": "??? (4.63µm)",
-          "telescope": "???",
-          "filter": "???",
-          "mount": "???",
-          "totalIntegrationTime": "30 hours"
-        },
         "videoUrl": "https://www.youtube.com/embed/mjMiKYCD6xk",
-        "links": {
-          "download": "https://drive.google.com/file/d/1f0eMOpRaL1a9uNZMfhnGrBhSmqklVHY5/view?usp=drive_link",
-          "info": "https://en.wikipedia.org/wiki/Veil_Nebula"
-        },
         "software": [
           "../../img/gallery/siril_logo.png",
           "../../img/gallery/graxpert_logo.png",
@@ -123,5 +116,4 @@
       }
     ]
   }
-
 }

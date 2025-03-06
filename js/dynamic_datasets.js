@@ -21,7 +21,19 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             const dataset = data[id];
-            const variants = dataset.variants;
+            const common = dataset.common || {};
+            const variants = dataset.variants.map(variant => {
+                return {
+                    // Берём автора непосредственно из варианта (если его нет, можно опционально добавить fallback)
+                    author: variant.author || "",
+                    info: { ...common.info, ...variant.info },
+                    comparison: { ...common.comparison, ...variant.comparison },
+                    videoUrl: variant.videoUrl,
+                    links: { ...common.links, ...variant.links },
+                    software: variant.software
+                };
+            });
+
             if (!variants || variants.length === 0) {
                 console.error("There are no options for this dataset");
                 return;
