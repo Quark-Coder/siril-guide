@@ -3,7 +3,7 @@
     "title": "NGC 6618",
     "common": {
       "comparison": {
-        "baseImage": "../img/gallery/NGC6618_prestretched_low_res.png"
+        "baseImage": "img/gallery/NGC6618_prestretched_low_res.png"
       },
       "info": {
         "dataAuthor": "@siryessirnz",
@@ -23,25 +23,25 @@
       {
         "author": "@Quark",
         "comparison": {
-          "overlayImage": "../img/gallery/NGC6618_low_res.png"
+          "overlayImage": "img/gallery/NGC6618_low_res.png"
         },
         "videoUrl": "https://www.youtube.com/embed/Ow10jJMwtz8",
         "software": [
-          "../img/gallery/siril_logo.png",
-          "../img/gallery/graxpert_logo.png",
-          "../img/gallery/gimp_logo.png"
+          "img/gallery/siril_logo.png",
+          "img/gallery/graxpert_logo.png",
+          "img/gallery/gimp_logo.png"
         ]
       },
       {
         "author": "@Quark",
         "comparison": {
-          "overlayImage": "../img/gallery/NGC6618_v2_low_res.png"
+          "overlayImage": "img/gallery/NGC6618_v2_low_res.png"
         },
         "videoUrl": "https://youtube.com/embed/AYnxYVNxfpw",
         "software": [
-          "../img/gallery/siril_logo.png",
-          "../img/gallery/graxpert_logo.png",
-          "../img/gallery/photoshop_logo.png"
+          "img/gallery/siril_logo.png",
+          "img/gallery/graxpert_logo.png",
+          "img/gallery/photoshop_logo.png"
         ]
       }
     ]
@@ -50,7 +50,7 @@
     "title": "NGC 6523",
     "common": {
       "comparison": {
-        "baseImage": "../img/gallery/NGC6523_prestretched_low_res.png"
+        "baseImage": "img/gallery/NGC6523_prestretched_low_res.png"
       },
       "info": {
         "dataAuthor": "@siryessirnz",
@@ -70,13 +70,13 @@
       {
         "author": "@Quark",
         "comparison": {
-          "overlayImage": "../img/gallery/NGC6523_low_res.png"
+          "overlayImage": "img/gallery/NGC6523_low_res.png"
         },
         "videoUrl": "https://www.youtube.com/embed/e59zAev2WJU",
         "software": [
-          "../img/gallery/siril_logo.png",
-          "../img/gallery/graxpert_logo.png",
-          "../img/gallery/gimp_logo.png"
+          "img/gallery/siril_logo.png",
+          "img/gallery/graxpert_logo.png",
+          "img/gallery/gimp_logo.png"
         ]
       }
     ]
@@ -85,7 +85,7 @@
     "title": "NGC 6995",
     "common": {
       "comparison": {
-        "baseImage": "../img/gallery/NGC6995_prestretched_low_res.png"
+        "baseImage": "img/gallery/NGC6995_prestretched_low_res.png"
       },
       "info": {
         "dataAuthor": "@KaidenBainAstro(rockingflyer756)",
@@ -105,13 +105,13 @@
       {
         "author": "@Quark",
         "comparison": {
-          "overlayImage": "../img/gallery/NGC6995_low_res.png"
+          "overlayImage": "img/gallery/NGC6995_low_res.png"
         },
         "videoUrl": "https://www.youtube.com/embed/mjMiKYCD6xk",
         "software": [
-          "../img/gallery/siril_logo.png",
-          "../img/gallery/graxpert_logo.png",
-          "../img/gallery/gimp_logo.png"
+          "img/gallery/siril_logo.png",
+          "img/gallery/graxpert_logo.png",
+          "img/gallery/gimp_logo.png"
         ]
       }
     ]
