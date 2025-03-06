@@ -213,7 +213,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 20px;
-  background-color: #bfbfbf; /* Серый фон */
+  background-color: #bfbfbf;
   padding: 20px;
 }
 
@@ -224,7 +224,7 @@ body {
   border: 2px solid #000000;
   text-align: center;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  text-decoration: none; /* Убирает подчёркивание */
+  text-decoration: none;
 }
 
 .tool-card img {
@@ -239,9 +239,8 @@ body {
   padding: 10px;
 }
 
-/* Убирает подчёркивание у всех ссылок внутри .tools-section */
 .tools-section a {
   text-decoration: none;
-  color: inherit; /* Сохраняет цвет текста */
+  color: inherit;
 }
 
