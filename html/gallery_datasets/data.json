@@ -125,6 +125,18 @@
           "../../img/gallery/graxpert_logo.png",
           "../../img/gallery/gimp_logo.png"
         ]
+      },
+      {
+        "author": "@Quark",
+        "comparison": {
+          "overlayImage": "../../img/gallery/NGC6995_v2_low_res.png"
+        },
+        "videoUrl": "https://www.youtube.com/embed/AbTWKMCiboo",
+        "software": [
+          "../../img/gallery/siril_logo.png",
+          "../../img/gallery/graxpert_logo.png",
+          "../../img/gallery/photoshop_logo.png"
+        ]
       }
     ]
   }
