@@ -129,7 +129,8 @@
       {
         "author": "@Quark",
         "comparison": {
-          "overlayImage": "../../img/gallery/NGC6995_v2_low_res.png"
+          "overlayImage": "../../img/gallery/NGC6995_v2_low_res.png",
+          "hdImage": "../../img/gallery/high_res/NGC6995_v2_high_res.png"
         },
         "videoUrl": "https://www.youtube.com/embed/AbTWKMCiboo",
         "software": [

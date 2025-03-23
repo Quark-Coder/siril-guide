@@ -1,82 +1,94 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
         <title>Siril guide</title>
         <link type="text/css" rel="stylesheet" href="../../css/stylesheet.css">
         <link type="text/css" rel="stylesheet" href="../../css/slider.css">
         <link type="text/css" rel="stylesheet" href="../../css/gallery_datasets.css">
+
         <script type="text/javascript" src="../../js/slider.js"></script>
         <script type="text/javascript" src="../../js/sticky_navpan.js"></script>
         <script type="text/javascript" src="../../js/dynamic_datasets.js"></script>
     </head>
-
-    <body style="margin: 0;">
-        <div class="container">
-            <div class="box">
-                <img src="../../img/main.jpg" height="100%" width="100%" alt="Main">
-            </div>
+    <body>
+    <div class="container">
+        <div class="box">
+            <img src="../../img/main.jpg" height="100%" width="100%" alt="Main">
+        </div>
         <div class="centered">
             <span style="font-size:50px;">Siril guide</span>
         </div>
-        </div>
+    </div>
 
-        <div id="navbar">
-            <a href="../../index.html">Getting started</a>
-            <a href="../preprocess.html">Pre-process</a>
-            <div class="dropdown">
-                <button class="dropbtn">Processing
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="../galaxy.html">Galaxy</a>
-                    <a href="../nebula.html">Nebulae</a>
-                </div>
-            </div>
-            <a href="../tools.html">Tools</a>
-            <a class="active" href="../gallery.html">Gallery</a>
-            <a href="../about.html">About</a>
-        </div>
-
-        <div class="dropdown-variants">
-            <button class="dropbtn-variants">Other processes</button>
-            <div class="dropdown-content-variants" id="variantsList">
-                <div class="variant-item">
-                    <span class="variant-author">Загрузка...</span>
-                </div>
+    <div id="navbar">
+        <a href="../../index.html">Getting started</a>
+        <a href="../preprocess.html">Pre-process</a>
+        <div class="dropdown">
+            <button class="dropbtn">Processing
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="../galaxy.html">Galaxy</a>
+                <a href="../nebula.html">Nebulae</a>
             </div>
         </div>
+        <a href="../tools.html">Tools</a>
+        <a class="active" href="../gallery.html">Gallery</a>
+        <a href="../about.html">About</a>
+    </div>
 
-        <div class="sublime content-container">
-            <div class="img-comp-container">
-                <div class="img-comp-img">
-                    <img id="baseImage" src="" width="500" height="500" alt="Base image">
-                </div>
-                <div class="img-comp-img img-comp-overlay">
-                    <img id="overlayImage" src="" width="500" height="500" alt="Overlay image">
-                </div>
-            </div>
-
-            <div class="info-container">
-                <div class="info-description-container">
-                    <div id="infoDescription" class="info-description">
-
-                    </div>
-                    <div class="video-container">
-                        <iframe id="videoFrame" width="500" height="300" src="" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-                <div class="info-links">
-                    <a id="downloadLink" target="_blank" href="#"><img src="../../img/gallery/download.png" alt="Download"></a>
-                    <a id="infoLink" target="_blank" href="#"><img src="../../img/gallery/question_sign.png" alt="Info"></a>
-                </div>
+    <div class="dropdown-variants">
+        <button class="dropbtn-variants">Other processes</button>
+        <div class="dropdown-content-variants" id="variantsList">
+            <div class="variant-item">
+                <span class="variant-author">Loading...</span>
             </div>
         </div>
+    </div>
 
-        <span style="font-size: 1.13em">
-            <hr>
-            Contributors:<br>
-            careless25, Lazulkat
-        </span>
+    <div class="sublime content-container">
+        <div class="img-comp-container">
+            <div class="img-comp-img">
+                <img id="baseImage" src="" width="500" height="500" alt="Base image">
+            </div>
+            <div class="img-comp-img img-comp-overlay">
+                <img id="overlayImage" src="" width="500" height="500" alt="Overlay image">
+            </div>
+            <button id="hdButton" class="hd-button">HD</button>
+        </div>
+
+        <div class="info-container">
+            <div class="info-description-container">
+                <div id="infoDescription" class="info-description"></div>
+                <div class="video-container">
+                    <iframe id="videoFrame" width="500" height="300" src="" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="info-links">
+                <a id="downloadLink" target="_blank" href="#">
+                    <img src="../../img/gallery/download.png" alt="Download">
+                </a>
+                <a id="infoLink" target="_blank" href="#">
+                    <img src="../../img/gallery/question_sign.png" alt="Info">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="hdModal" class="hd-modal">
+        <span id="hdClose" class="hd-close">&times;</span>
+        <img class="hd-modal-content" id="hdImg">
+    </div>
+
+    <span style="font-size: 1.13em">
+        <hr>
+        Contributors:<br>
+        careless25, Lazulkat
+      </span>
     </body>
 </html>
