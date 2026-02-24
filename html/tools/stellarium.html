@@ -1,0 +1,160 @@
+<html lang="en">
+    <head>
+        <title> Siril guide </title>
+        <link type="text/css" rel="stylesheet" href="../../css/stylesheet.css">
+        <script type="text/javascript" src="../../js/sticky_navpan.js"></script>
+    </head>
+
+    <body style="margin: 0;">
+    <div class="container">
+        <div class="box">
+            <img src="../../img/main.jpg" height="100%" width="100%" alt="Main">
+        </div>
+    <div class="centered"> <span style="font-size:50px;">Siril guide</span> </div>
+    </div>
+
+    <div id="navbar">
+        <a href="../../index.html">Getting started</a>
+        <a href="../preprocess.html"> Pre-process </a>
+        <div class="dropdown">
+            <button class="dropbtn">Processing
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="../galaxy.html">Galaxy</a>
+                <a href="../nebula.html">Nebulae</a>
+                <!-- <a href="">Cluster</a> -->
+            </div>
+        </div>
+        <a class="active" href="../tools.html"> Tools </a>
+        <a href="../gallery.html"> Gallery </a>
+        <a href="../about.html"> About </a>
+    </div>
+
+    <div class="sheetTemplate">
+        <span style="font-size: 1.5em">
+            <br>
+            <span style="font-size: 2em"> Enable Offline HiPS Surveys in Stellarium </span> <br>
+
+            <p>
+                The standard survey in Stellarium is as boring and uninformative as possible. Here I will show you how to make it much better.
+            </p>
+
+            <p>
+                <span style="font-size: 2em">Download survey using this script:</span> <br>
+                <a href="https://github.com/Quark-Coder/HIPS-survey-downloader" target="_blank">HIPS-survey-downloader</a>
+            </p>
+
+            <p>
+                <span style="font-size: 2em">Configure Stellarium:</span> <br>
+                Add these lines to the <b>config.ini</b> file (<b>%appdata%/Stellarium</b>): <br>
+                <br>
+                <code style="background-color: #f4f4f4; padding: 10px; display: block; white-space: pre-wrap;">[hips]
+show                                          = true
+sources/1/url                             = file:///E:/survey/NSNS_DR_01_tc8/hipslist
+sources/2/url                             = http://alasky.u-strasbg.fr/MocServer/query?*/P/*&get=record
+sources/3/url                             = https://data.stellarium.org/surveys/hipslist
+sources/size                              = 3
+surveys/1/url                             = file:///E:/survey/NSNS_DR_01_tc8
+surveys/size                              = 1</code>
+            </p>
+
+            <p>
+                <span style="font-size: 2em">Add configuration files:</span> <br>
+                Add these two files to the root directory of your HiPS survey. (if the survey is different, you need to change the contents of the files, plus change the path to the root folder of the survey): <br>
+                <br>
+                <b>properties</b> file: <br>
+                <code style="background-color: #f4f4f4; padding: 10px; display: block; white-space: pre-wrap; font-size: 0.9em;">obs_description      = Almost true-color composite without star subtraction as compressed 8-bit color HIPS for easy visualization. See http://www.simg.de/nebulae3/dr0_1 for other data sets.
+prov_progenitor      = Calculated from 5" intermediate data of the Northern Sky Narrowband Survey DR0.1, see http://www.simg.de/nebulae3/dr0_1
+obs_copyright        = Northern Sky Narrowband Survey by Stefan Ziegenbalg. The material can be freely used and distributed under Creative Commons Attribution-Noncommercial-Share Alike 4.0 license (CC-BY-NC-SA).
+obs_copyright_url    = http://www.simg.de/nebulae3/dr0_1
+obs_regime           = Optical
+client_category      = Image/Optical
+client_sort_key      = 02723
+client_application   = AladinLite
+client_application   = AladinDesktop
+em_min               = 4.4e-7
+em_max               = 7.0e-7
+t_min                = 58432
+t_max                = 59826
+hips_service_url     = file:///E:/survey/NSNS_DR_01_tc8
+creator_did          = ivo://simg.de/P/NSNS/DR0_1/tc8
+hips_creator         = S. Ziegenbalg
+obs_title            = NSNS Offline Survey
+hips_builder         = Aladin/HipsGen v12.119
+hips_version         = 1.4
+hips_release_date    = 2025-06-07T16:33Z
+hips_frame           = equatorial
+hips_order           = 5
+hips_order_min       = 0
+hips_tile_width      = 512
+hips_status          = public
+hips_tile_format     = png
+hips_initial_ra      = 60.0
+hips_initial_dec     = 60.0
+hips_initial_fov     = 150.0
+hips_pixel_scale     = 0.003579
+dataproduct_type     = image
+hips_rgb_red         = Northern Sky Narrowband Survey, DR0.1, Red [0.0 NaN 1.0 Linear]
+hips_rgb_green       = Northern Sky Narrowband Survey, DR0.1, Green [0.0 NaN 1.0 Linear]
+hips_rgb_blue        = Northern Sky Narrowband Survey, DR0.1, Blue [0.0 NaN 1.0 Linear]
+moc_sky_fraction     = 0.651
+hipsgen_date         = 2024-10-26T23:13Z
+hipsgen_params       = inRed=./tc8-0 inGreen=./tc8-1 inBlue=./tc8-2 out=./tc8 id=simg.de/P/NSNS/DR0_1/tc8 "title=Northern Sky Narrowband Survey, DR0.1, True-color" "pixelcut=0 1" "datarange=0 1" "creator=S. Ziegenbalg" "target=60 60 150" "status=public master clonable" RGB ALLSKY CHECKCODE DETAILS
+hips_creation_date   = 2024-10-26T23:13Z
+hips_overlay         = overlayMean mergeOverwriteTile treeMedian
+hips_estsize         = 7675351
+hips_nb_tiles        = 10729
+dataproduct_subtype  = color
+hips_check_code      = png:465038343</code>
+            </p>
+
+            <p>
+                <b>hipslist</b> file: <br>
+                <code style="background-color: #f4f4f4; padding: 10px; display: block; white-space: pre-wrap;">creator_did       = ivo://simg.de/P/NSNS/DR0_1/tc8
+obs_title         = NSNS Offline Survey
+hips_release_date = 2025-06-07T16:33Z
+hips_service_url  = file:///E:/survey/NSNS_DR_01_tc8
+hips_status       = public
+hips_order        = 5
+hips_tile_format  = png
+dataproduct_type  = image
+moc_sky_fraction  = 1</code>
+            </p>
+
+            <p>
+                <span style="font-size: 2em">Directory structure:</span> <br>
+                Your survey directory should look like this: <br>
+                <code style="background-color: #f4f4f4; padding: 10px; display: block; white-space: pre-wrap;">E:\SURVEY\NSNS_DR_01_TC8
++---hipslist
++---properties
++---Norder0
+|   \---Dir0
++---Norder1
+|   \---Dir0
++---Norder2
+|   \---Dir0
++---Norder3
+|   \---Dir0
++---Norder4
+|   \---Dir0
+\---Norder5
+    +---Dir0
+    \---Dir10000</code>
+            </p>
+
+            <p>
+                <span style="font-size: 2em">Final result:</span> <br>
+                After that, go to <b>Stellarium -> F4 -> Surveys</b> and find the offline survey! <br>
+                <img src="../../img/tools/survey.png" alt="Survey configuration"> <br>
+            </p>
+        </span>
+    </div>
+
+    <span style="font-size: 1.13em">
+            <hr>
+            Contributors:<br>
+            careless25, Lazulkat
+        </span>
+    </body>
+</html>
